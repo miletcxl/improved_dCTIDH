@@ -63,3 +63,11 @@ We recomend to split up the search, as this will take a while (up to a month usi
 cd scripts
 ./greedywombats.py
 ```
+
+## Licenses
+See [LICENSE](https://github.com/PaZeZeVaAt/dCTIDH/blob/main/LICENSE) for the license concerning the code in this repository.
+
+For the third-party code see their licenses:
+- [CTIDH](http://ctidh.isogeny.org/): [http://ctidh.isogeny.org/high-ctidh-20210523/AUTHORS.md.html](http://ctidh.isogeny.org/high-ctidh-20210523/AUTHORS.md.html)
+- [dCSIDH](https://github.com/kemtls-secsidh/code): [https://github.com/kemtls-secsidh/code/blob/main/LICENSE.md]
+- [sibc](https://github.com/JJChiDguez/sibc): [https://github.com/JJChiDguez/sibc/blob/master/LICENSE]
