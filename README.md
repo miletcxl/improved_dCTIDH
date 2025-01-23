@@ -1,4 +1,13 @@
-# dCTIHD - Deterministic CTIDH from WOMBats
+# dCTIDH: Fast & Deterministic CTIDH
+This repository contains auxiliary material for the paper ["dCTIDH: Fast & Deterministic CTIDH"](https://eprint.iacr.org/2025/xxx).
+
+Authors:
+- [Fabio Campos](https://www.sopmac.org/) `<campos@sopmac.de>`
+- [Andreas Hellenbrand](https://www.sopmac.org/) `<andreas.hellenbrand@hs-rm.de>`
+- [Michael Meyer](https://www.uni-regensburg.de/informatics-data-science/qpc/team/dr-michael-meyer/index.html) `<michael@random-oracles.org>`
+- [Krijn Reijnders](https://krijnreijnders.com/) `<krijn@q1q1.nl>`
+
+# Overview
 
 ## Building
 
