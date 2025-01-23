@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/krijn/Documents/Mathematics/Research/dachshund-wombat/code/src/common/uintbig2047m4l207.s
+uintbig_namespace.h
+/home/krijn/Documents/Mathematics/Research/dachshund-wombat/code/src/common/uintbig_namespace.h
+

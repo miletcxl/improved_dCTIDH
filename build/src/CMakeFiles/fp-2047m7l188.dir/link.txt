@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfp-2047m7l188.a "CMakeFiles/fp-2047m7l188.dir/common/fp/fp-counters.c.o" "CMakeFiles/fp-2047m7l188.dir/common/fp/karatsuba/fp-karatsuba.c.o" "CMakeFiles/fp-2047m7l188.dir/common/fp/fp_inv2047m7l188.c.o" "CMakeFiles/fp-2047m7l188.dir/common/fp/fp_sqrt2047m7l188.c.o" "CMakeFiles/fp-2047m7l188.dir/common/fp/karatsuba/fp2047m7l188.s.o" "CMakeFiles/fp-2047m7l188.dir/common/fp/fp2.c.o" CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o "CMakeFiles/uint-2047m7l188.dir/common/uintbig2047m7l188.s.o"
+/usr/bin/ranlib libfp-2047m7l188.a
