@@ -1,5 +1,5 @@
 # dCTIDH: Fast & Deterministic CTIDH
-This repository contains auxiliary material for the paper ["dCTIDH: Fast & Deterministic CTIDH"](https://eprint.iacr.org/2025/xxx).
+This repository contains auxiliary material for the paper ["dCTIDH: Fast & Deterministic CTIDH"](https://eprint.iacr.org/2025/107).
 
 Authors:
 - [Fabio Campos](https://www.sopmac.org/) `<campos@sopmac.de>`
