@@ -42,14 +42,14 @@ which can be used with `-bact`, resp. `-bfp`.
 
 The benchmarks can be analyzed using the `analyze_bench.py` script:
 ```sh
-./main/ctidh-2047m1l226.main -bact 500 > bench_action.out
+./build/main/ctidh-2047m1l226.main -bact 500 > bench_action.out
 ./analyze_bench.py < bench_action.out 
 ```
 
 ## Constant-time Check
 If `DENABLE_CT_TESTING=ON`, `checkct` versions of the executable are created for all versions, which can be validated with `valgrind`.
 
-e.G.:
+For example, to validate that ctidh-2047m6l194 is constant-time:
 ```sh 
 valgrind ./main/checkct-2047m6l194.main
 ```
