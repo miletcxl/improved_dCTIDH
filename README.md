@@ -23,7 +23,7 @@ cmake -DENABLE_CT_TESTING=ON ..
 # Building
 make
 ```
-this builds the executeables for 3 versions:
+This builds the executables for 3 versions:
 
 - 2047m1l226 
 - 2047m4l205
@@ -56,8 +56,8 @@ valgrind ./main/checkct-2047m6l194.main
 
 
 ## Parameter Search
-We use greedy to find optimal configurations. The script explors the keyspace for primes with 151 to 226 ell_i and 1 to 18 batches.
-We recomend to split up the search, as this will take a while (up to a month using 4 jobs with 48 threads each).
+We use greedy to find optimal configurations. The script explores the key space for primes with 151 to 226 ell_i and 1 to 18 batches.
+We recommend to split up the search, as this will take a while (up to a month using 4 jobs with 48 threads each).
 
 ```sh
 cd scripts
