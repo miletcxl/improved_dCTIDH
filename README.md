@@ -16,7 +16,8 @@ Authors:
 mkdir build && cd build
 cmake ..
 
-# If you want with instrumentation for constant-time behavior testing, the default value is OFF. Valgrind development files are used for this build option.
+# If you want with instrumentation for constant-time behavior testing, the default value is OFF.
+# Valgrind development files are used for this build option.
 cmake -DENABLE_CT_TESTING=ON ..
 
 # Building
