@@ -3,7 +3,7 @@ This repository contains auxiliary material for the paper ["dCTIDH: Fast & Deter
 
 Authors:
 - [Fabio Campos](https://www.sopmac.org/) `<campos@sopmac.de>`
-- [Andreas Hellenbrand](https://www.sopmac.org/) `<andreas.hellenbrand@hs-rm.de>`
+- [Andreas Hellenbrand](https:/www.andhell.de/) `<andreas.hellenbrand@hs-rm.de>`
 - [Michael Meyer](https://www.uni-regensburg.de/informatics-data-science/qpc/team/dr-michael-meyer/index.html) `<michael@random-oracles.org>`
 - [Krijn Reijnders](https://krijnreijnders.com/) `<krijn@q1q1.nl>`
 
