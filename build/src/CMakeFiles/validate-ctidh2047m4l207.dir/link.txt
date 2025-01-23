@@ -1,2 +1,0 @@
-/usr/bin/ar qc libvalidate-ctidh2047m4l207.a "CMakeFiles/validate-ctidh2047m4l207.dir/common/validate.c.o"
-/usr/bin/ranlib libvalidate-ctidh2047m4l207.a

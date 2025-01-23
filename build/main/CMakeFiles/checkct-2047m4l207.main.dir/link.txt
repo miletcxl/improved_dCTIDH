@@ -1,1 +1,0 @@
-/usr/bin/cc "CMakeFiles/checkct-2047m4l207.main.dir/checkct.c.o" -o checkct-2047m4l207.main  ../lib/libsecsidh.a -lgmp ../src/librng.a

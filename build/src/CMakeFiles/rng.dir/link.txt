@@ -1,2 +1,0 @@
-/usr/bin/ar qc librng.a CMakeFiles/rng.dir/common/rng.c.o
-/usr/bin/ranlib librng.a
