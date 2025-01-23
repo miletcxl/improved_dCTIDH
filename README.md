@@ -30,10 +30,10 @@ this builds the executeables for 3 versions:
 
 ## benchmarking
 ```sh
-usage: 	
-    ./ctidh-2047m1l226.main				            // for a quick test
-	./ctidh-2047m1l226.main -bact [number of runs]	// run benchmark for the action
-	./ctidh-2047m1l226.main -bfp [number of runs]	// run benchmark for fp arithmetic
+usage (when in /build/main) : 	
+    ./ctidh-2047m1l226.main				// for a quick test
+    ./ctidh-2047m1l226.main -bact [number of runs]	// run benchmark for the action
+    ./ctidh-2047m1l226.main -bfp [number of runs]	// run benchmark for fp arithmetic
 ```
 
 Each version contains benchmarking tools for the action, as well as the finite-field arithmetic,
