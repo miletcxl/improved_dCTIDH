@@ -29,12 +29,46 @@ This builds the executables for 3 versions:
 - 2047m4l205
 - 2047m6l194
 
-## Benchmarking
+## benchmarking
+
+### Automated Benchmarking
+
+The project includes automated benchmark targets that make it easy to run and analyze benchmarks for all enabled parameter sets:
+
 ```sh
-usage (when in /build/main) : 	
-    ./ctidh-2047m1l226.main				// for a quick test
-    ./ctidh-2047m1l226.main -bact [number of runs]	// run benchmark for the action
-    ./ctidh-2047m1l226.main -bfp [number of runs]	// run benchmark for fp arithmetic
+# Run benchmarks for a specific parameter set
+make benchmark-ctidh-2047m1l226
+
+# Run all benchmarks and display a summary
+make benchmark
+
+# Show just the summary of previously run benchmarks 
+make benchmark-summary
+```
+
+By default, benchmarks run with 100 iterations. You can change this by setting the `SECSIDH_BENCHMARK_RUNS` option:
+
+```sh
+# Configure with 500 benchmark runs
+cmake -DSECSIDH_BENCHMARK_RUNS=500 ..
+
+```
+
+The benchmark results are:
+1. Displayed in the console with formatted tables
+2. Saved to files in the build directory:
+   - Raw logs: `benchmark-ctidh-<param_set>.log`
+   - Analysis results: `benchmark-ctidh-<param_set>-analysis.log`
+
+### Manual Benchmarking
+
+You can also run benchmarks manually using the executable options:
+when in `build`:
+```sh
+usage: 	
+    ./main/ctidh-2047m1l226.main				            // for a quick test
+	./main//ctidh-2047m1l226.main -bact [number of runs]	// run benchmark for the action
+	./main//ctidh-2047m1l226.main -bfp [number of runs]		// run benchmark for fp arithmetic
 ```
 
 Each version contains benchmarking tools for the action, as well as the finite-field arithmetic,
@@ -42,10 +76,21 @@ which can be used with `-bact`, resp. `-bfp`.
 
 The benchmarks can be analyzed using the `analyze_bench.py` script:
 ```sh
-./build/main/ctidh-2047m1l226.main -bact 500 > bench_action.out
-./analyze_bench.py < bench_action.out 
+./main/ctidh-2047m1l226.main -bact 500 > bench_action.out
+python3 ../analyze_bench.py < bench_action.out 
 ```
 
+The analyze_bench.py script supports different output formats:
+```sh
+# Default grid format for terminal viewing
+python3 ../analyze_bench.py < bench_action.out
+
+# CSV format for importing into spreadsheets
+python3 ../analyze_bench.py --format=csv < bench_action.out
+
+# LaTeX format for academic papers
+python3 ../analyze_bench.py --format=latex < bench_action.out
+```
 ## Constant-time Check
 If `DENABLE_CT_TESTING=ON`, `checkct` versions of the executable are created for all versions, which can be validated with `valgrind`.
 

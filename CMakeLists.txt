@@ -129,3 +129,69 @@ install(FILES
         ${PROJECT_BINARY_DIR}/include/secsidh/secsidhconfig.h
         DESTINATION include/secsidh
 )
+
+# Add benchmark targets
+option(SECSIDH_BENCHMARK_RUNS "Number of runs for each benchmark" 100)
+
+# Ensure BENCHMARK_RUNS is a number
+if(NOT SECSIDH_BENCHMARK_RUNS OR SECSIDH_BENCHMARK_RUNS STREQUAL "OFF")
+    set(SECSIDH_BENCHMARK_RUNS 100)
+    message(STATUS "Setting SECSIDH_BENCHMARK_RUNS to default value: 100")
+endif()
+
+# Create benchmark target for CTIDH
+foreach(bits IN ITEMS ${SECSIDH_PARAMETER_SETS_CTIDH})
+    if(SECSIDH_ENABLE_CTIDH${bits})
+        add_custom_target(benchmark-ctidh-${bits}
+            COMMAND ${CMAKE_COMMAND} -E echo "Running CTIDH-${bits} benchmark with ${SECSIDH_BENCHMARK_RUNS} iterations..."
+            COMMAND ${CMAKE_BINARY_DIR}/main/ctidh-${bits}.main -bact ${SECSIDH_BENCHMARK_RUNS} > ${CMAKE_BINARY_DIR}/benchmark-ctidh-${bits}.log
+            COMMAND ${CMAKE_COMMAND} -E echo "Analyzing benchmark results for CTIDH-${bits}..."
+            COMMAND python3 ${CMAKE_SOURCE_DIR}/analyze_bench.py < ${CMAKE_BINARY_DIR}/benchmark-ctidh-${bits}.log > ${CMAKE_BINARY_DIR}/benchmark-ctidh-${bits}-analysis.log
+            COMMAND ${CMAKE_COMMAND} -E echo "=== BENCHMARK RESULTS FOR CTIDH-${bits} ==="
+            COMMAND cat ${CMAKE_BINARY_DIR}/benchmark-ctidh-${bits}-analysis.log
+            COMMAND ${CMAKE_COMMAND} -E echo "=========================================="
+            DEPENDS ctidh-${bits}.main
+            COMMENT "Benchmarking CTIDH-${bits}"
+            VERBATIM
+        )
+    endif()
+endforeach()
+
+# Add a benchmark summary target that does not depend on benchmark-all
+add_custom_target(benchmark-summary
+    COMMAND ${CMAKE_COMMAND} -E echo "=== BENCHMARK SUMMARY ==="
+    COMMENT "Showing benchmark summary"
+    VERBATIM
+)
+
+# Add commands to print benchmark summaries for each parameter set
+foreach(bits IN ITEMS ${SECSIDH_PARAMETER_SETS_CTIDH})
+    if(SECSIDH_ENABLE_CTIDH${bits})
+        add_custom_command(
+            TARGET benchmark-summary
+            POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E echo "Results for CTIDH-${bits}:"
+            COMMAND grep -A 20 "=== ACTION ===" ${CMAKE_BINARY_DIR}/benchmark-ctidh-${bits}-analysis.log || echo "No action results found"
+            COMMAND ${CMAKE_COMMAND} -E echo "------------------------------------------"
+            VERBATIM
+        )
+    endif()
+endforeach()
+
+# Master benchmark target that just runs the benchmarks (no summary)
+add_custom_target(benchmark-all
+    COMMENT "Running all benchmarks"
+)
+
+# Add dependencies to the benchmark-all target
+foreach(bits IN ITEMS ${SECSIDH_PARAMETER_SETS_CTIDH})
+    if(SECSIDH_ENABLE_CTIDH${bits})
+        add_dependencies(benchmark-all benchmark-ctidh-${bits})
+    endif()
+endforeach()
+
+# Combined target that runs benchmarks and then shows the summary
+add_custom_target(benchmark
+    DEPENDS benchmark-all benchmark-summary
+    COMMENT "Running all benchmarks and showing summary"
+)
