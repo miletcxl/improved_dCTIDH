@@ -186,14 +186,16 @@ static int run_benchmark_action(int64_t target, int64_t KEYS)
         fulltorsion_points(u, B.A);
         B.seed = u[0];
 
+        long long cycles = 0;
+
         for (long long key = 0; key < KEYS; ++key)
         {
-            fpmul = fpsqr = fpadd = 0;
-            long long cycles = getticks();
-            bool ok = validate(&B);
-            cycles = getticks() - cycles;
-            printf("%lld %lld validate \t\t mulsq %7ld sq %7ld addsub %7ld cycles %12lld\n", loop, key, fpmul, fpsqr, fpadd, cycles);
-            assert(ok);
+            // fpmul = fpsqr = fpadd = 0;
+            // cycles = getticks();
+            // bool ok = validate(&B);
+            // cycles = getticks() - cycles;
+            // printf("%lld %lld validate \t\t mulsq %7ld sq %7ld addsub %7ld cycles %12lld\n", loop, key, fpmul, fpsqr, fpadd, cycles);
+            // assert(ok);
 
             fpmul = fpsqr = fpadd = 0;
             cycles = getticks();

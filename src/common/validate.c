@@ -18,51 +18,6 @@
 //     fp_print(a.im);
 // }
 
-// wombat validate by checking full order point
-bool validate(public_key const *in){
-    proj A, A24;
-    fp_copy(A.x, in->A);
-    fp_copy(A.z, fp_1);
-    xA24(&A24, &A);
-
-    proj Pp, Pm;
-
-#ifdef ENABLE_CT_TESTING    
-    memset(&Pp, 0, sizeof(proj));
-    memset(&Pp.z, 0, sizeof(proj));
-    VALGRIND_MAKE_MEM_DEFINED(&Pp.z, sizeof(fp));      
-    VALGRIND_MAKE_MEM_DEFINED(&Pp, sizeof(proj)); 
-    VALGRIND_MAKE_MEM_DEFINED(&A24, sizeof(proj));  
-#endif 
-
-    fp seed;
-    fp_set(seed, in->seed);
-    fp_enc(seed, seed);
-    elligator_seeded(&Pp, &Pm, &A24, (const fp *)seed);
-
-
-    for (int64_t j = 0; j < two_cofactor; j++)
-    {
-        xDBL(&Pp, &Pp, &A24, 0);
-    } 
-    
-    // remove ells and check that we do not reach the point at infinity
-    for(int i = primes_num-1; i >= 1; i--)
-    {
-        xMUL_dac(&Pp, &A24, 0, &Pp, primes_dac[i], primes_daclen[i], primes_daclen[i]);
-        if(fp_iszero(Pp.z))
-            return false;
-    }
-
-    // after removing the last ell, now we should have the point at infinity
-    xMUL_dac(&Pp, &A24, 0, &Pp, primes_dac[0], primes_daclen[0], primes_daclen[0]);
-    return fp_iszero(Pp.z);
-}
-
-
-////
-//// VALIDATE OLD 
-////
 
 // For computing [(p + 1) / l_i]P, i:=0, ..., (N - 1)
 void cofactor_multiples(proj P[], proj const A, size_t lower, size_t upper)
@@ -91,127 +46,107 @@ void cofactor_multiples(proj P[], proj const A, size_t lower, size_t upper)
 }
 
 
-// #if defined(P511) || defined(P512) || defined(P2047m1l226) || defined(P4095m27l262)
+static void clearpublicprimes_vali(proj *P, const proj *A24)
+{
+  // clear powers of 2
+  for (int64_t i = 0; i < two_cofactor; i++)
+  {
+    xDBL(P, P, A24, 0);
+  }
+}
 
-// // output: true if key is valid
-// // output: false if key is invalid
-// bool validate(public_key const *in)
-// {
+static void multiples_vali(proj Q[], proj const P, proj const A)
+{
+  int j;
 
-//     fp x;
+  proj_copy(&Q[0], &P);
+  for (j = 0; j < (int)primes_num; j++)
+  {
+    if (primes[j] == 3 || primes[j] == 5 || primes[j] == 7)
+      continue;
 
-//     int number_of_primes = primes_num;
-//     proj P[primes_num] = {0};
+    xMUL_dac(&Q[0], &A, 1, &Q[0], primes_dac[j], primes_daclen[j], primes_daclen[j]);
+  }
 
-//     proj A;
-//     // A = (a : 1)
-//     fp_copy(A.x, in->A);
-//     fp_set1(A.z);
+  //  --- multiplying by 3
+  xMUL_dac(&Q[1], &A, 1, &Q[0], 0, 0, 0);
+  xMUL_dac(&Q[1], &A, 1, &Q[1], 0, 0, 0);
+  //  --- multiplying by 5
+  xMUL_dac(&Q[0], &A, 1, &Q[0], 0, 1, 1);
+  xMUL_dac(&Q[0], &A, 1, &Q[0], 0, 1, 1);
+  xMUL_dac(&Q[2], &A, 1, &Q[1], 0, 1, 1);
+  xMUL_dac(&Q[2], &A, 1, &Q[2], 0, 1, 1);
 
-//     // Coding curve coefficients as (A' + 2C : 4C)
-//     fp_add(A.z, A.z, A.z); // 2C
-//     fp_add(A.x, A.x, A.z); // A' + 2C
-//     fp_add(A.z, A.z, A.z); // 4C
+  //  --- multiplying by 7
+  xMUL_dac(&Q[0], &A, 1, &Q[0], 2, 2, 2);
+  xMUL_dac(&Q[0], &A, 1, &Q[0], 2, 2, 2);
+  xMUL_dac(&Q[1], &A, 1, &Q[1], 2, 2, 2);
+  xMUL_dac(&Q[1], &A, 1, &Q[1], 2, 2, 2);
+}
 
-//     int i;
-//     uint64_t bits;
+// wombat validate by checking full order point
+bool validate(public_key const *in){
+    proj A, A24;
+    fp_copy(A.x, in->A);
+    fp_copy(A.z, fp_1);
+    xA24(&A24, &A);
 
-//     do
-//     {
-//         bits = 0;
-//         // P = (x : 1)
-//         fp_random(x);
-//         fp_copy(P[0].x, x);
-//         fp_set1(P[0].z);
+    proj Tp, Tm, Pp[primes_num], Aux_Tp[3], Pm[primes_num], Aux_Tm[3];
 
-//         // Multiplying by the cofactor
-//         for (int64_t j = 0; j < two_cofactor; j++)
-//         {
-//             xDBL(&P[0], &P[0], &A, 1);
-//         } 
+    uint8_t boolp = 0, boolm = 0;
 
-//         // At this step, P[0] is expected to be a torsion-([p + 1]/[2^e]) point
-//         cofactor_multiples(P, A, 0, number_of_primes);
-//         for (i = number_of_primes - 1; i >= 0; i--)
-//         {
-//             // we only gain information if [(p+1)/l] P is non-zero
-//             if (fp_iszero(P[i].z) != 1)
-//             {
-//                 // xmul(P[i], i, (const fp *)P[i], (const fp *)A);
-//                 // printf("prime[i] = %lld\n", primes[i]);
-//                 xMUL_dac(&P[i], &A, 1, &P[i], primes_dac[i], primes_daclen[i], primes_daclen[i]);
+#ifdef ENABLE_CT_TESTING
+    VALGRIND_MAKE_MEM_DEFINED(Aux_Tp, sizeof(proj) * 3);
+    VALGRIND_MAKE_MEM_DEFINED(Aux_Tm, sizeof(proj) * 3);
+    VALGRIND_MAKE_MEM_DEFINED(&A, sizeof(proj));
+    VALGRIND_MAKE_MEM_DEFINED(&boolp, sizeof(uint8_t));
+    VALGRIND_MAKE_MEM_DEFINED(&boolm, sizeof(uint8_t));
+    VALGRIND_MAKE_MEM_DEFINED(&Tp, sizeof(proj));
+    VALGRIND_MAKE_MEM_DEFINED(Pp, sizeof(proj) * primes_num);
+    VALGRIND_MAKE_MEM_DEFINED(Pm, sizeof(proj) * primes_num);
+#endif
+    fp seed;
+    fp_set(seed, in->seed);
+    fp_enc(seed, seed);
+    elligator_seeded(&Tp, &Tm, &A, (const fp *)seed);
 
-//                 // P does not have order dividing p + 1?
-//                 if (fp_iszero(P[i].z) != 1)
-//                     return false;
+    clearpublicprimes_vali(&Tp, &A);
+    clearpublicprimes_vali(&Tm, &A);
 
-//                 // If bits > UPPER_BOUND, hence definitely supersingular
-//                 bits += primes_daclen[i];
-//                 if (bits > UPPER_BOUND)
-//                     return true;
-//             };
-//         };
+#ifdef ENABLE_CT_TESTING
+    memset(Aux_Tp, 0, sizeof(proj) * 3);
+#endif
+    multiples_vali(Aux_Tp, Tp, A);
 
-//     } while (1);
-// }
+#ifdef ENABLE_CT_TESTING
+    memset(Aux_Tm, 0, sizeof(proj) * 3);
+#endif
+    multiples_vali(Aux_Tm, Tm, A);
 
-// #else
+    // Checking if Tp is an order (p+1)/(2^e)
+    proj_copy(&Pp[0], &Tp);
+    cofactor_multiples(Pp, A, 0, primes_num);
+    boolp = 1;
+    boolp &= (1 - fp_iszero(Pp[0].z)) | (1 - fp_iszero(Aux_Tp[0].z));
+    boolp &= (1 - fp_iszero(Pp[1].z)) | (1 - fp_iszero(Aux_Tp[1].z));
+    boolp &= (1 - fp_iszero(Pp[2].z)) | (1 - fp_iszero(Aux_Tp[2].z));
+    for (int j = 3; j < (int)primes_num; j++)
+        boolp &= (1 - fp_iszero(Pp[j].z));
 
-// bool validate(public_key const *in)
-// {
-//     proj P;
-//     proj A;
-// #ifndef CTIDH
-//     int number_of_primes = N;  
-// #else
-//     int number_of_primes = primes_num;
-// #endif 
-//     int ord = 0;
 
-//     fp_copy(A.x, in->A);
-//     fp_set1(A.z);
+    // ---> This can be removed for wd1 style
+    // Checking if Tm is an order (p+1)/(2^e)
+    proj_copy(&Pm[0], &Tm);
+    cofactor_multiples(Pm, A, 0, primes_num);
 
-//     // Coding curve coefficients as (A' + 2C : 4C)
-//     fp_add(A.z, A.z, A.z); // 2C
-//     fp_add(A.x, A.x, A.z); // A' + 2C
-//     fp_add(A.z, A.z, A.z); // 4C
+    boolm = 1;
+    boolm &= (1 - fp_iszero(Pm[0].z)) | (1 - fp_iszero(Aux_Tm[0].z));
+    boolm &= (1 - fp_iszero(Pm[1].z)) | (1 - fp_iszero(Aux_Tm[1].z));
+    boolm &= (1 - fp_iszero(Pm[2].z)) | (1 - fp_iszero(Aux_Tm[2].z));
+    for (int j = 3; j < (int)primes_num; j++)
+        boolm &= (1 - fp_iszero(Pm[j].z));
 
-//     //fp_copy(P.x, p_minus_2);
-//     fp_set1(P.x);
-//     fp_add(P.x, P.x, P.x);      //x = -2
-//     fp_set1(P.z);
 
-//     // at this point, P is the point (2, -) on E_A
-//     // this point should have enough 2-torsion!
-
-//     //xmul_dac or xMUL as long as it kills all ell_i
-//     //@sopmac: does this work?
-//     // for any reviewer reading this carefully: a highly optimized version should perform
-//     // a Montgomery ladder using X0 = 2 of length prod ell_i here
-//     for (int i = 0; i < (int) number_of_primes; i++)
-//         xMUL_dac(&P, &A, 1, &P, primes_dac[i], primes_daclen[i], primes_daclen[i]);
     
-//     //we kill of all ell_i, so P at this point should just
-//     //be a point of order 2^z. We check z by doing doublings until the point is infinity
-//     // as long as z is large enough (probabilisitically always true for our primes)
-//     // this verifies supersingularity, by verifying a point of order 2^z > 4 sqrt(p)
-
-//     //@sopmac: are we sure this is the right amount of doubling
-//     // and not one too many?
-//     while (fp_iszero(P.z) == 0 && ord < two_cofactor)
-//     {
-//         xDBL(&P, &P, &A, 1);
-//         ord++;
-//     }
-
-//     // now if P is inf we not that the 2-torsion of P was ord
-//     if (fp_iszero(P.z) == 1 && ord > (NUMBER_OF_WORDS*64)/2 + 1)
-//     {
-//         return true;    
-//     }
-
-//     return false;
-
-// }
-
-// #endif
+    return boolp & boolm;
+}
