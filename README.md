@@ -10,6 +10,8 @@ Authors:
 # Overview
 
 ## Building
+We tested our code with gcc-12 on Debian 12.
+Furthermore, the implementation makes use of the ADX (ADOX and ADCX) instructions, so you need an Intel Broadwell/AMD ZEN CPU or newer.
 
 ```sh
 # Only necessary first time (generally)
