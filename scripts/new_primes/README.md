@@ -1,3 +1,7 @@
+# New Prime
+
+This folder contains the scripts required to create the finite field arithmetic, should you wish to add a new parameter set with a new prime number.
+
 ## steps required to generate files for a given prime
 
 1. Update the files `genFiles/autogen` and `genSteps/autogen` by adding the required information for the prime, such as:

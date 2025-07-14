@@ -10,8 +10,9 @@ Authors:
 # Overview
 
 ## Building
-We tested our code with gcc-12 on Debian 12.
-Furthermore, the implementation makes use of the ADX (ADOX and ADCX) instructions, so you need an Intel Broadwell/AMD ZEN CPU or newer.
+We tested our code with GCC 12 on Debian 12.
+Furthermore, the implementation makes use of the ADX (ADOX and ADCX) instructions, 
+so you need an Intel Broadwell/AMD ZEN CPU or newer.
 
 ```sh
 # Only necessary first time (generally)
@@ -25,7 +26,7 @@ cmake -DENABLE_CT_TESTING=ON ..
 # Building
 make
 ```
-this builds the executeables for 3 versions:
+This builds the executeables for 3 versions:
 
 - 2047m1l226 
 - 2047m4l205
@@ -68,9 +69,9 @@ You can also run benchmarks manually using the executable options:
 when in `build`:
 ```sh
 usage: 	
-    ./main/ctidh-2047m1l226.main				            // for a quick test
-	./main//ctidh-2047m1l226.main -bact [number of runs]	// run benchmark for the action
-	./main//ctidh-2047m1l226.main -bfp [number of runs]		// run benchmark for fp arithmetic
+    ./main/ctidh-2047m1l226.main                            # for a quick test
+	./main//ctidh-2047m1l226.main -bact [number of runs]    # run benchmark for the action
+	./main//ctidh-2047m1l226.main -bfp [number of runs]     # run benchmark for fp arithmetic
 ```
 
 Each version contains benchmarking tools for the action, as well as the finite-field arithmetic,
@@ -98,19 +99,36 @@ python3 ../analyze_bench.py --format=latex < bench_action.out
 If `DENABLE_CT_TESTING=ON`, `checkct` versions of the executable are created 
 for all versions, which can be validated with `valgrind`.
 
-e.G.:
+when in `build`:
 ```sh 
+cmake -DENABLE_CT_TESTING=ON ..
+
+make  # creates all versions
+
+make checkct-2047m1l226.main  # for single version
+make checkct-2047m4l205.main
+make checkct-2047m6l194.main
+
+# run valgrind test
+valgrind ./main/checkct-2047m1l226.main
+valgrind ./main/checkct-2047m4l205.main
 valgrind ./main/checkct-2047m6l194.main
 ```
 
 
-## parameter search
+**Remark**: There seems to be a Valgrind issue with some combinations of GCC versions and modern CPUs due to missing AVX instructions. See the details [here](https://sourceware.org/git/?p=valgrind.git;a=blob;f=docs/internals/3_15_BUGSTATUS.txt;h=88d5466f6b799bf7b57c3ca6be0a269fb82df30f;hb=HEAD#l103).
+If you encounter issues, we recommend trying again with GCC 12, as used in our setup.
+
+## parameter search and new primes
 We use greedy to find optimal configurations. The script explors the keyspace 
 for primes with 151 to 226 ell_i and 1 to 18 batches.
 We recomend to split up the search, as this will take a while 
 (up to a month using 4 jobs with 48 threads each).
 
 ```sh
-cd scripts
+cd scripts/greedy/
 ./greedywombats.py
 ```
+
+To add the files needed for a new prime as part of a new parameter set,
+use the scripts in `scripts/new_prime`
