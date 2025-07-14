@@ -8,6 +8,8 @@ Authors:
 - [Krijn Reijnders](https://krijnreijnders.com/) `<krijn@q1q1.nl>`
 
 # Overview
+This implementation is based on the code from [secsidh](https://github.com/kemtls-secsidh/secsidh).
+
 
 ## Building
 We tested our code with GCC 12 on Debian 12.
