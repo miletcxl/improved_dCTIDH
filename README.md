@@ -134,3 +134,11 @@ cd scripts/greedy/
 
 To add the files needed for a new prime as part of a new parameter set,
 use the scripts in `scripts/new_prime`
+
+# Licenses
+
+Code in this repository that does not indicate otherwise is placed in the public domain.
+
+For the third party code see their licenses:
+
+- [secsidh](https://github.com/kemtls-secsidh/secsidh): [https://github.com/kemtls-secsidh/secsidh/blob/main/code/LICENSE.md](https://github.com/kemtls-secsidh/secsidh/blob/main/code/LICENSE.md)
