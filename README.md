@@ -138,7 +138,5 @@ use the scripts in `scripts/new_prime`
 # Licenses
 
 Code in this repository that does not indicate otherwise is placed in the public domain.
-
-For the third party code see their licenses:
-
-- [secsidh](https://github.com/kemtls-secsidh/secsidh): [https://github.com/kemtls-secsidh/secsidh/blob/main/code/LICENSE.md](https://github.com/kemtls-secsidh/secsidh/blob/main/code/LICENSE.md)
+The code in this repository is based on [secsidh](https://github.com/kemtls-secsidh/secsidh), 
+which uses the same license as this work: [secsidh License (CC0)](https://github.com/kemtls-secsidh/secsidh/blob/main/code/LICENSE.md)
