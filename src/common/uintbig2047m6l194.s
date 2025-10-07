@@ -110,131 +110,25 @@ secsidh_internal_2047m6l194_uintbig_sub:
 .global secsidh_internal_2047m6l194_uintbig_mul3_64
 secsidh_internal_2047m6l194_uintbig_mul3_64:
 
-    mulx r10, rax, [rsi +  0]
-    mov [rdi +  0], rax
+    xor rax, rax
+
+    mulx r10, rax, [rsi]
+    mov [rdi], rax
 
     mulx r11, rax, [rsi + 8]
-    add  rax, r10
+    adcx rax, r10
     mov [rdi + 8], rax
 
-    mulx r10, rax, [rsi + 16]
-    adcx rax, r11
-    mov [rdi + 16], rax
+    .set k, 1
+    .rept 15
+        mulx r10, rax, [rsi + 16*k]
+        adox rax, r11
+        mov [rdi + 16*k], rax
 
-    mulx r11, rax, [rsi + 24]
-    adcx rax, r10
-    mov [rdi + 24], rax
+        mulx r11, rax, [rsi + 16*k + 8]
+        adcx rax, r10
+        mov [rdi + 16*k + 8], rax
 
-    mulx r10, rax, [rsi + 32]
-    adcx rax, r11
-    mov [rdi + 32], rax
-
-    mulx r11, rax, [rsi + 40]
-    adcx rax, r10
-    mov [rdi + 40], rax
-
-    mulx r10, rax, [rsi + 48]
-    adcx rax, r11
-    mov [rdi + 48], rax
-
-    mulx r11, rax, [rsi + 56]
-    adcx rax, r10
-    mov [rdi + 56], rax
-
-    mulx r10, rax, [rsi + 64]
-    adcx rax, r11
-    mov [rdi + 64], rax
-
-    mulx r11, rax, [rsi + 72]
-    adcx rax, r10
-    mov [rdi + 72], rax
-
-    mulx r10, rax, [rsi + 80]
-    adcx rax, r11
-    mov [rdi + 80], rax
-
-    mulx r11, rax, [rsi + 88]
-    adcx rax, r10
-    mov [rdi + 88], rax
-
-    mulx r10, rax, [rsi + 96]
-    adcx rax, r11
-    mov [rdi + 96], rax
-
-    mulx r11, rax, [rsi + 104]
-    adcx rax, r10
-    mov [rdi + 104], rax
-
-    mulx r10, rax, [rsi + 112]
-    adcx rax, r11
-    mov [rdi + 112], rax
-
-    mulx r11, rax, [rsi + 120]
-    adcx rax, r10
-    mov [rdi + 120], rax
-
-    mulx r10, rax, [rsi + 128]
-    adcx rax, r11
-    mov [rdi + 128], rax
-
-    mulx r11, rax, [rsi + 136]
-    adcx rax, r10
-    mov [rdi + 136], rax
-
-    mulx r10, rax, [rsi + 144]
-    adcx rax, r11
-    mov [rdi + 144], rax
-
-    mulx r11, rax, [rsi + 152]
-    adcx rax, r10
-    mov [rdi + 152], rax
-
-    mulx r10, rax, [rsi + 160]
-    adcx rax, r11
-    mov [rdi + 160], rax
-
-    mulx r11, rax, [rsi + 168]
-    adcx rax, r10
-    mov [rdi + 168], rax
-
-    mulx r10, rax, [rsi + 176]
-    adcx rax, r11
-    mov [rdi + 176], rax
-
-    mulx r11, rax, [rsi + 184]
-    adcx rax, r10
-    mov [rdi + 184], rax
-
-    mulx r10, rax, [rsi + 192]
-    adcx rax, r11
-    mov [rdi + 192], rax
-
-    mulx r11, rax, [rsi + 200]
-    adcx rax, r10
-    mov [rdi + 200], rax
-
-    mulx r10, rax, [rsi + 208]
-    adcx rax, r11
-    mov [rdi + 208], rax
-
-    mulx r11, rax, [rsi + 216]
-    adcx rax, r10
-    mov [rdi + 216], rax
-
-    mulx r10, rax, [rsi + 224]
-    adcx rax, r11
-    mov [rdi + 224], rax
-
-    mulx r11, rax, [rsi + 232]
-    adcx rax, r10
-    mov [rdi + 232], rax
-
-    mulx r10, rax, [rsi + 240]
-    adcx rax, r11
-    mov [rdi + 240], rax
-
-    mulx r11, rax, [rsi + 248]
-    adcx rax, r10
-    mov [rdi + 248], rax
-
+        .set k, k+1
+    .endr
     ret

@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/ctidh-2047m4l205.main.dir/ctidh.c.o" -o ctidh-2047m4l205.main  ../lib/libsecsidh.a -lgmp ../src/librng.a 

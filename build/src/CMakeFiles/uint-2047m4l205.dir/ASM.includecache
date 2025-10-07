@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/25336/school/dCTIDH/src/common/uintbig2047m4l205.s
+uintbig_namespace.h
+/mnt/c/Users/25336/school/dCTIDH/src/common/uintbig_namespace.h
+
