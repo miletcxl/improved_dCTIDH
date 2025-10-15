@@ -144,7 +144,10 @@ def dynamic_programming_algorithm(L, C_dac, C_isog, C_eval):
                 b, C[i][Tuple] = min(alpha,  key=lambda t:  t[1])     # We save the minimal cost corresponding to the triangle with leaves Tuple
                 S[i][Tuple] = [b] + S[i - b][Tuple[b:]] + S[b][Tuple[:b]]    # We save the optimal strategy corresponding to the triangle with leaves Tuple
                
-                
+    print("--- Dynamic Programming Result ---")
+    print(f"Strategy (S): {S[n][tuple(L)]}")
+    print(f"Cost (C): {C[n][tuple(L)]}")
+    print("----------------------------------")            
     return S[n][tuple(L)], C[n][tuple(L)]   # The weight of the horizontal edges [(0,n-1),(0,n)] must be equal to C_xISOG[global_L.index(L[0])].
 
 
