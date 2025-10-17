@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/dCTIDH
+CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/dCTIDH/build
+CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/karatsuba_fp_sqr.dir/depend.make
@@ -70,17 +70,17 @@ include src/CMakeFiles/karatsuba_fp_sqr.dir/progress.make
 include src/CMakeFiles/karatsuba_fp_sqr.dir/flags.make
 
 src/CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o: src/CMakeFiles/karatsuba_fp_sqr.dir/flags.make
-src/CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o: /mnt/c/Users/25336/school/dCTIDH/src/common/fp/karatsuba/sqr.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/25336/school/dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building ASM object src/CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o -c /mnt/c/Users/25336/school/dCTIDH/src/common/fp/karatsuba/sqr.s
+src/CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o: /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/karatsuba/sqr.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building ASM object src/CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/karatsuba/sqr.s
 
 src/CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.i"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /mnt/c/Users/25336/school/dCTIDH/src/common/fp/karatsuba/sqr.s > CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.i
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/karatsuba/sqr.s > CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.i
 
 src/CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.s"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /mnt/c/Users/25336/school/dCTIDH/src/common/fp/karatsuba/sqr.s -o CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.s
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/karatsuba/sqr.s -o CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.s
 
 karatsuba_fp_sqr: src/CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o
 karatsuba_fp_sqr: src/CMakeFiles/karatsuba_fp_sqr.dir/build.make
@@ -91,10 +91,10 @@ src/CMakeFiles/karatsuba_fp_sqr.dir/build: karatsuba_fp_sqr
 .PHONY : src/CMakeFiles/karatsuba_fp_sqr.dir/build
 
 src/CMakeFiles/karatsuba_fp_sqr.dir/clean:
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/karatsuba_fp_sqr.dir/cmake_clean.cmake
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/karatsuba_fp_sqr.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/karatsuba_fp_sqr.dir/clean
 
 src/CMakeFiles/karatsuba_fp_sqr.dir/depend:
-	cd /mnt/c/Users/25336/school/dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/dCTIDH /mnt/c/Users/25336/school/dCTIDH/src /mnt/c/Users/25336/school/dCTIDH/build /mnt/c/Users/25336/school/dCTIDH/build/src /mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/karatsuba_fp_sqr.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/YEST/improved_dCTIDH /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/karatsuba_fp_sqr.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/karatsuba_fp_sqr.dir/depend
 

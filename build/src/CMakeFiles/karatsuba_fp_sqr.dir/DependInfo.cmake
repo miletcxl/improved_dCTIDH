@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/mnt/c/Users/25336/school/dCTIDH/src/common/fp/karatsuba/sqr.s" "/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o"
+  "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/karatsuba/sqr.s" "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 

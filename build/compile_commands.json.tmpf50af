@@ -1,0 +1,70 @@
+[
+{
+  "directory": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src",
+  "command": "/home/caoxinlei/miniconda3/envs/dctidh/bin/cc -DGLOBAL_COUNTERS=1 -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/include -fPIC -march=native -Werror -Wall -Wextra -Wpedantic -Wstrict-prototypes -Wshadow -std=gnu11 -Wno-stringop-overflow -o CMakeFiles/rng.dir/common/rng.c.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/rng.c",
+  "file": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/rng.c",
+  "output": "src/CMakeFiles/rng.dir/common/rng.c.o"
+},
+{
+  "directory": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src",
+  "command": "/home/caoxinlei/miniconda3/envs/dctidh/bin/cc -DGLOBAL_COUNTERS=1 -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/include -fPIC -march=native -Werror -Wall -Wextra -Wpedantic -Wstrict-prototypes -Wshadow -std=gnu11 -Wno-stringop-overflow -o CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/karatsuba/sqr.s",
+  "file": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/karatsuba/sqr.s",
+  "output": "src/CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o"
+},
+{
+  "directory": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src",
+  "command": "/home/caoxinlei/miniconda3/envs/dctidh/bin/cc -DGLOBAL_COUNTERS=1 -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/include -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/. -fPIC -march=native -Werror -Wall -Wextra -Wpedantic -Wstrict-prototypes -Wshadow -std=gnu11 -Wno-stringop-overflow -o CMakeFiles/int32_sort.dir/common/int32_sort.c.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/int32_sort.c",
+  "file": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/int32_sort.c",
+  "output": "src/CMakeFiles/int32_sort.dir/common/int32_sort.c.o"
+},
+{
+  "directory": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src",
+  "command": "/home/caoxinlei/miniconda3/envs/dctidh/bin/cc -DGLOBAL_COUNTERS=1 -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/include -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/. -fPIC -march=native -Werror -Wall -Wextra -Wpedantic -Wstrict-prototypes -Wshadow -std=gnu11 -Wno-stringop-overflow -o CMakeFiles/fips202.dir/common/fips202.c.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fips202.c",
+  "file": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fips202.c",
+  "output": "src/CMakeFiles/fips202.dir/common/fips202.c.o"
+},
+{
+  "directory": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src",
+  "command": "/home/caoxinlei/miniconda3/envs/dctidh/bin/cc -DGLOBAL_COUNTERS=1 -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/include -fPIC -march=native -Werror -Wall -Wextra -Wpedantic -Wstrict-prototypes -Wshadow -std=gnu11 -Wno-stringop-overflow -o CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/keccakf1600.c",
+  "file": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/keccakf1600.c",
+  "output": "src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o"
+},
+{
+  "directory": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src",
+  "command": "/home/caoxinlei/miniconda3/envs/dctidh/bin/cc -DGLOBAL_COUNTERS=1 -DNAMESPACE_NAME=2047m1l226 -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/include -fPIC -march=native -Werror -Wall -Wextra -Wpedantic -Wstrict-prototypes -Wshadow -std=gnu11 -Wno-stringop-overflow -o CMakeFiles/uint-2047m1l226.dir/common/uintbig2047m1l226.s.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/uintbig2047m1l226.s",
+  "file": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/uintbig2047m1l226.s",
+  "output": "src/CMakeFiles/uint-2047m1l226.dir/common/uintbig2047m1l226.s.o"
+},
+{
+  "directory": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src",
+  "command": "/home/caoxinlei/miniconda3/envs/dctidh/bin/cc -DGLOBAL_COUNTERS=1 -DKARATSUBA -DMONTGOMERY -DNAMESPACE_NAME=2047m1l226 -DP2047m1l226 -DUSE_GMP_SEC_FUNCTIONS -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/include -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/CSIDH/csidh-2047m1l226 -fPIC -march=native -Werror -Wall -Wextra -Wpedantic -Wstrict-prototypes -Wshadow -std=gnu11 -Wno-stringop-overflow -o CMakeFiles/fp-2047m1l226.dir/common/fp/fp-counters.c.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/fp-counters.c",
+  "file": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/fp-counters.c",
+  "output": "src/CMakeFiles/fp-2047m1l226.dir/common/fp/fp-counters.c.o"
+},
+{
+  "directory": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src",
+  "command": "/home/caoxinlei/miniconda3/envs/dctidh/bin/cc -DGLOBAL_COUNTERS=1 -DKARATSUBA -DMONTGOMERY -DNAMESPACE_NAME=2047m1l226 -DP2047m1l226 -DUSE_GMP_SEC_FUNCTIONS -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/include -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/CSIDH/csidh-2047m1l226 -fPIC -march=native -Werror -Wall -Wextra -Wpedantic -Wstrict-prototypes -Wshadow -std=gnu11 -Wno-stringop-overflow -o CMakeFiles/fp-2047m1l226.dir/common/fp/karatsuba/fp-karatsuba.c.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/karatsuba/fp-karatsuba.c",
+  "file": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/karatsuba/fp-karatsuba.c",
+  "output": "src/CMakeFiles/fp-2047m1l226.dir/common/fp/karatsuba/fp-karatsuba.c.o"
+},
+{
+  "directory": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src",
+  "command": "/home/caoxinlei/miniconda3/envs/dctidh/bin/cc -DGLOBAL_COUNTERS=1 -DKARATSUBA -DMONTGOMERY -DNAMESPACE_NAME=2047m1l226 -DP2047m1l226 -DUSE_GMP_SEC_FUNCTIONS -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/include -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/CSIDH/csidh-2047m1l226 -fPIC -march=native -Werror -Wall -Wextra -Wpedantic -Wstrict-prototypes -Wshadow -std=gnu11 -Wno-stringop-overflow -o CMakeFiles/fp-2047m1l226.dir/common/fp/fp_inv2047m1l226.c.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/fp_inv2047m1l226.c",
+  "file": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/fp_inv2047m1l226.c",
+  "output": "src/CMakeFiles/fp-2047m1l226.dir/common/fp/fp_inv2047m1l226.c.o"
+},
+{
+  "directory": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src",
+  "command": "/home/caoxinlei/miniconda3/envs/dctidh/bin/cc -DGLOBAL_COUNTERS=1 -DKARATSUBA -DMONTGOMERY -DNAMESPACE_NAME=2047m1l226 -DP2047m1l226 -DUSE_GMP_SEC_FUNCTIONS -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/include -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/CSIDH/csidh-2047m1l226 -fPIC -march=native -Werror -Wall -Wextra -Wpedantic -Wstrict-prototypes -Wshadow -std=gnu11 -Wno-stringop-overflow -o CMakeFiles/fp-2047m1l226.dir/common/fp/fp_sqrt2047m1l226.c.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/fp_sqrt2047m1l226.c",
+  "file": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/fp_sqrt2047m1l226.c",
+  "output": "src/CMakeFiles/fp-2047m1l226.dir/common/fp/fp_sqrt2047m1l226.c.o"
+},
+{
+  "directory": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src",
+  "command": "/home/caoxinlei/miniconda3/envs/dctidh/bin/cc -DGLOBAL_COUNTERS=1 -DKARATSUBA -DMONTGOMERY -DNAMESPACE_NAME=2047m1l226 -DP2047m1l226 -DUSE_GMP_SEC_FUNCTIONS -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/include -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/CSIDH/csidh-2047m1l226 -fPIC -march=native -Werror -Wall -Wextra -Wpedantic -Wstrict-prototypes -Wshadow -std=gnu11 -Wno-stringop-overflow -o CMakeFiles/fp-2047m1l226.dir/common/fp/karatsuba/fp2047m1l226.s.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/karatsuba/fp2047m1l226.s",
+  "file": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/karatsuba/fp2047m1l226.s",
+  "output": "src/CMakeFiles/fp-2047m1l226.dir/common/fp/karatsuba/fp2047m1l226.s.o"
+},
+{
+  "directory": "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src",
+  "command": "/home/caoxinlei/miniconda3/envs/dctidh/bin/cc -DGLOBAL_COUNTERS=1 -DKARATSUBA -DMONTGOMERY -DNAMESPACE_NAME=2047m1l226 -DP2047m1l226 -DUSE_GMP_SEC_FUNCTIONS -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/include -I/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/CSIDH/csidh-2047m1l226 -fPIC -march=native -Werror -Wall -Wextra -Wpedantic -Wstrict-prototypes -Wshadow -std=gnu11 -Wno-stringop-overflow -o CMakeFiles/fp-2047m1l226.dir/common/fp/fp2.c.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/fp2.c

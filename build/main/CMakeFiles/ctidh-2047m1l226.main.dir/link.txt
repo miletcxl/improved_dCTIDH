@@ -1,1 +1,1 @@
-/usr/bin/cc "CMakeFiles/ctidh-2047m1l226.main.dir/ctidh.c.o" -o ctidh-2047m1l226.main  ../lib/libsecsidh.a -lgmp ../src/librng.a 
+/home/caoxinlei/miniconda3/envs/dctidh/bin/cc "CMakeFiles/ctidh-2047m1l226.main.dir/ctidh.c.o" -o ctidh-2047m1l226.main  ../lib/libsecsidh.a -lgmp ../src/librng.a 

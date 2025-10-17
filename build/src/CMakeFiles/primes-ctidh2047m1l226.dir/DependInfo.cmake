@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/25336/school/dCTIDH/src/common/primes2047m1l226.c" "src/CMakeFiles/primes-ctidh2047m1l226.dir/common/primes2047m1l226.c.o" "gcc" "src/CMakeFiles/primes-ctidh2047m1l226.dir/common/primes2047m1l226.c.o.d"
+  "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/primes2047m1l226.c" "src/CMakeFiles/primes-ctidh2047m1l226.dir/common/primes2047m1l226.c.o" "gcc" "src/CMakeFiles/primes-ctidh2047m1l226.dir/common/primes2047m1l226.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

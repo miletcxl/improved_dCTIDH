@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/25336/school/dCTIDH/main
+# Install script for directory: /mnt/c/Users/25336/school/YEST/improved_dCTIDH/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

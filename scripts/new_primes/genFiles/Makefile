@@ -3,7 +3,7 @@
 SCC=gcc
 CC=clang -O0 -g -march=native -mtune=native -std=gnu99 -pedantic -Wall -Wextra -Wno-language-extension-token -fwrapv -DTIMECOP -DGETRANDOM
 
-default: generic 2048 2048 2048
+default: generic 2048
 
 all: default timecop
 
@@ -14,27 +14,9 @@ checkct2048mults bench2048mults \
 checkct2048cycles bench2048cycles \
 ubench2048 umults2048
 
-2048: costpoly2048.out checkct2048untuned bench2048untuned test2048.out \
-checkct2048mults bench2048mults \
-checkct2048cycles bench2048cycles \
-ubench2048 umults2048
-
-2048: costpoly2048.out checkct2048untuned bench2048untuned test2048.out \
-checkct2048mults bench2048mults \
-checkct2048cycles bench2048cycles \
-ubench2048 umults2048
-
 timecop: \
 checkct2048untuned checkct2048mults checkct2048cycles \
-checkct2048untuned checkct2048mults checkct2048cycles \
-checkct2048untuned checkct2048mults checkct2048cycles \
 
-	valgrind ./checkct2048untuned
-	valgrind ./checkct2048mults
-	valgrind ./checkct2048cycles
-	valgrind ./checkct2048untuned
-	valgrind ./checkct2048mults
-	valgrind ./checkct2048cycles
 	valgrind ./checkct2048untuned
 	valgrind ./checkct2048mults
 	valgrind ./checkct2048cycles
@@ -47,47 +29,11 @@ libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunecycles2048.a libtest.a
 		-o checkct2048cycles checkct.c \
 		libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunecycles2048.a libtest.a
 
-checkct2048cycles: checkct.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunecycles2048.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o checkct2048cycles checkct.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunecycles2048.a libtest.a
-
-checkct2048cycles: checkct.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunecycles2048.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o checkct2048cycles checkct.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunecycles2048.a libtest.a
-
 checkct2048mults: checkct.c \
 libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunemults2048.a libtest.a
 	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
 		-o checkct2048mults checkct.c \
 		libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunemults2048.a libtest.a
-
-checkct2048mults: checkct.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunemults2048.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o checkct2048mults checkct.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunemults2048.a libtest.a
-
-checkct2048mults: checkct.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunemults2048.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o checkct2048mults checkct.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunemults2048.a libtest.a
-
-checkct2048untuned: checkct.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o checkct2048untuned checkct.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-
-checkct2048untuned: checkct.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o checkct2048untuned checkct.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
 
 checkct2048untuned: checkct.c \
 libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
@@ -101,47 +47,11 @@ libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunecycles2048.a libtest.a
 		-o bench2048cycles bench.c \
 		libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunecycles2048.a libtest.a
 
-bench2048cycles: bench.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunecycles2048.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o bench2048cycles bench.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunecycles2048.a libtest.a
-
-bench2048cycles: bench.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunecycles2048.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o bench2048cycles bench.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunecycles2048.a libtest.a
-
 bench2048mults: bench.c \
 libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunemults2048.a libtest.a
 	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
 		-o bench2048mults bench.c \
 		libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunemults2048.a libtest.a
-
-bench2048mults: bench.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunemults2048.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o bench2048mults bench.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunemults2048.a libtest.a
-
-bench2048mults: bench.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunemults2048.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o bench2048mults bench.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_tunemults2048.a libtest.a
-
-bench2048untuned: bench.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o bench2048untuned bench.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-
-bench2048untuned: bench.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o bench2048untuned bench.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
 
 bench2048untuned: bench.c \
 libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
@@ -169,28 +79,6 @@ libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
 		-o test2048 test.c \
 		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
 
-test2048: test.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o test2048 test.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-
-test2048: test.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o test2048 test.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-
-test2048.out: test2048 test2048.exp
-	[ -f test2048.time ] && cat test2048.time || :
-	time ./test2048 > test2048.out
-	cmp test2048.out test2048.exp
-
-test2048.out: test2048 test2048.exp
-	[ -f test2048.time ] && cat test2048.time || :
-	time ./test2048 > test2048.out
-	cmp test2048.out test2048.exp
-
 test2048.out: test2048 test2048.exp
 	[ -f test2048.time ] && cat test2048.time || :
 	time ./test2048 > test2048.out
@@ -202,26 +90,6 @@ costpoly2048.out: costpoly2048
 	./costpoly2048 > costpoly2048.out
 	cmp costpoly2048.out costpoly.py
 
-costpoly2048.out: costpoly2048
-	./costpoly2048 > costpoly2048.out
-	cmp costpoly2048.out costpoly.py
-
-costpoly2048.out: costpoly2048
-	./costpoly2048 > costpoly2048.out
-	cmp costpoly2048.out costpoly.py
-
-costpoly2048: costpoly.c \
-libhighctidh_2048.a libhighctidh_base.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o costpoly2048 costpoly.c \
-		libhighctidh_2048.a libhighctidh_base.a libtest.a
-
-costpoly2048: costpoly.c \
-libhighctidh_2048.a libhighctidh_base.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o costpoly2048 costpoly.c \
-		libhighctidh_2048.a libhighctidh_base.a libtest.a
-
 costpoly2048: costpoly.c \
 libhighctidh_2048.a libhighctidh_base.a libtest.a
 	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
@@ -232,30 +100,6 @@ umults2048: umults.c \
 libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
 	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
 		-o umults2048 umults.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-
-umults2048: umults.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o umults2048 umults.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-
-umults2048: umults.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o umults2048 umults.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-
-ubench2048: ubench.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o ubench2048 ubench.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-
-ubench2048: ubench.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o ubench2048 ubench.c \
 		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
 
 ubench2048: ubench.c \
@@ -270,42 +114,12 @@ libhighctidh_tunemults2048.a: steps_tunemults2048.o Makefile
 	ar cr libhighctidh_tunemults2048.a steps_tunemults2048.o
 	ranlib libhighctidh_tunemults2048.a
 
-libhighctidh_tunemults2048.a: steps_tunemults2048.o Makefile
-	ar cr libhighctidh_tunemults2048.a steps_tunemults2048.o
-	ranlib libhighctidh_tunemults2048.a
-
-libhighctidh_tunemults2048.a: steps_tunemults2048.o Makefile
-	ar cr libhighctidh_tunemults2048.a steps_tunemults2048.o
-	ranlib libhighctidh_tunemults2048.a
-
-steps_tunemults2048.o: steps_tunemults2048.c steps.h Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-c steps_tunemults2048.c
-
-steps_tunemults2048.o: steps_tunemults2048.c steps.h Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-c steps_tunemults2048.c
-
 steps_tunemults2048.o: steps_tunemults2048.c steps.h Makefile
 	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
 		-c steps_tunemults2048.c
 
 steps_tunemults2048.c: tunemults2048.out tune2c Makefile
 	./tune2c < tunemults2048.out > steps_tunemults2048.c
-
-steps_tunemults2048.c: tunemults2048.out tune2c Makefile
-	./tune2c < tunemults2048.out > steps_tunemults2048.c
-
-steps_tunemults2048.c: tunemults2048.out tune2c Makefile
-	./tune2c < tunemults2048.out > steps_tunemults2048.c
-
-tunemults2048.out: tunemults2048 Makefile
-	[ -f tunemults2048.time ] && cat tunemults2048.time || :
-	time ./tunemults2048 > tunemults2048.out
-
-tunemults2048.out: tunemults2048 Makefile
-	[ -f tunemults2048.time ] && cat tunemults2048.time || :
-	time ./tunemults2048 > tunemults2048.out
 
 tunemults2048.out: tunemults2048 Makefile
 	[ -f tunemults2048.time ] && cat tunemults2048.time || :
@@ -317,26 +131,6 @@ libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
 		-o tunemults2048 tunemults.c \
 		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
 
-tunemults2048: tunemults.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o tunemults2048 tunemults.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-
-tunemults2048: tunemults.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o tunemults2048 tunemults.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-
-libhighctidh_tunecycles2048.a: steps_tunecycles2048.o Makefile
-	ar cr libhighctidh_tunecycles2048.a steps_tunecycles2048.o
-	ranlib libhighctidh_tunecycles2048.a
-
-libhighctidh_tunecycles2048.a: steps_tunecycles2048.o Makefile
-	ar cr libhighctidh_tunecycles2048.a steps_tunecycles2048.o
-	ranlib libhighctidh_tunecycles2048.a
-
 libhighctidh_tunecycles2048.a: steps_tunecycles2048.o Makefile
 	ar cr libhighctidh_tunecycles2048.a steps_tunecycles2048.o
 	ranlib libhighctidh_tunecycles2048.a
@@ -345,30 +139,8 @@ steps_tunecycles2048.o: steps_tunecycles2048.c steps.h Makefile
 	$(CC) -D'NAMESPACEGENERIC(x)=highctidh_##x' \
 		-c steps_tunecycles2048.c
 
-steps_tunecycles2048.o: steps_tunecycles2048.c steps.h Makefile
-	$(CC) -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-c steps_tunecycles2048.c
-
-steps_tunecycles2048.o: steps_tunecycles2048.c steps.h Makefile
-	$(CC) -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-c steps_tunecycles2048.c
-
 steps_tunecycles2048.c: tunecycles2048.out tune2c Makefile
 	./tune2c < tunecycles2048.out > steps_tunecycles2048.c
-
-steps_tunecycles2048.c: tunecycles2048.out tune2c Makefile
-	./tune2c < tunecycles2048.out > steps_tunecycles2048.c
-
-steps_tunecycles2048.c: tunecycles2048.out tune2c Makefile
-	./tune2c < tunecycles2048.out > steps_tunecycles2048.c
-
-tunecycles2048.out: tunecycles2048 Makefile
-	[ -f tunecycles2048.time ] && cat tunecycles2048.time || :
-	time ./tunecycles2048 > tunecycles2048.out
-
-tunecycles2048.out: tunecycles2048 Makefile
-	[ -f tunecycles2048.time ] && cat tunecycles2048.time || :
-	time ./tunecycles2048 > tunecycles2048.out
 
 tunecycles2048.out: tunecycles2048 Makefile
 	[ -f tunecycles2048.time ] && cat tunecycles2048.time || :
@@ -380,27 +152,7 @@ libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
 		-o tunecycles2048 tunecycles.c \
 		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
 
-tunecycles2048: tunecycles.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o tunecycles2048 tunecycles.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-
-tunecycles2048: tunecycles.c \
-libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o tunecycles2048 tunecycles.c \
-		libhighctidh_2048.a libhighctidh_base.a libhighctidh_untuned.a libtest.a
-
-# ----- libhighctidh_{2048,2048,2048}, size-dependent functions:
-
-libhighctidh_2048.a: uintbig2048.o fp2048.o fp_inv2048.o fp_sqrt2048.o primes2048.o poly2048.o mont2048.o elligator2048.o skgen2048.o validate2048.o csidh2048.o Makefile
-	ar cr libhighctidh_2048.a uintbig2048.o fp2048.o fp_inv2048.o fp_sqrt2048.o primes2048.o poly2048.o mont2048.o elligator2048.o skgen2048.o validate2048.o csidh2048.o
-	ranlib libhighctidh_2048.a
-
-libhighctidh_2048.a: uintbig2048.o fp2048.o fp_inv2048.o fp_sqrt2048.o primes2048.o poly2048.o mont2048.o elligator2048.o skgen2048.o validate2048.o csidh2048.o Makefile
-	ar cr libhighctidh_2048.a uintbig2048.o fp2048.o fp_inv2048.o fp_sqrt2048.o primes2048.o poly2048.o mont2048.o elligator2048.o skgen2048.o validate2048.o csidh2048.o
-	ranlib libhighctidh_2048.a
+# ----- libhighctidh_{2048}, size-dependent functions:
 
 libhighctidh_2048.a: uintbig2048.o fp2048.o fp_inv2048.o fp_sqrt2048.o primes2048.o poly2048.o mont2048.o elligator2048.o skgen2048.o validate2048.o csidh2048.o Makefile
 	ar cr libhighctidh_2048.a uintbig2048.o fp2048.o fp_inv2048.o fp_sqrt2048.o primes2048.o poly2048.o mont2048.o elligator2048.o skgen2048.o validate2048.o csidh2048.o
@@ -410,33 +162,9 @@ csidh2048.o:  Makefile
 	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
 		-o csidh2048.o -c csidh.c
 
-csidh2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o csidh2048.o -c csidh.c
-
-csidh2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o csidh2048.o -c csidh.c
-
 validate2048.o:  Makefile
 	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
 		-o validate2048.o -c validate.c
-
-validate2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o validate2048.o -c validate.c
-
-validate2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o validate2048.o -c validate.c
-
-skgen2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o skgen2048.o -c skgen.c
-
-skgen2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o skgen2048.o -c skgen.c
 
 skgen2048.o:  Makefile
 	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
@@ -446,33 +174,9 @@ elligator2048.o:  Makefile
 	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
 		-o elligator2048.o -c elligator.c
 
-elligator2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o elligator2048.o -c elligator.c
-
-elligator2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o elligator2048.o -c elligator.c
-
 mont2048.o:  Makefile
 	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
 		-o mont2048.o -c mont.c
-
-mont2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o mont2048.o -c mont.c
-
-mont2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o mont2048.o -c mont.c
-
-poly2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o poly2048.o -c poly.c
-
-poly2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-o poly2048.o -c poly.c
 
 poly2048.o:  Makefile
 	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
@@ -482,22 +186,6 @@ fp_inv2048.o:  Makefile
 	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
 		-c fp_inv2048.c
 
-fp_inv2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-c fp_inv2048.c
-
-fp_inv2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-c fp_inv2048.c
-
-fp_sqrt2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-c fp_sqrt2048.c
-
-fp_sqrt2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-c fp_sqrt2048.c
-
 fp_sqrt2048.o:  Makefile
 	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
 		-c fp_sqrt2048.c
@@ -506,33 +194,9 @@ primes2048.o:  Makefile
 	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
 		-c primes2048.c
 
-primes2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-c primes2048.c
-
-primes2048.o:  Makefile
-	$(CC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-c primes2048.c
-
 fp2048.o: fp2048.S fp.h fp_namespace.h uintbig.h uintbig_namespace.h Makefile
 	$(SCC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
 		-c fp2048.S
-
-fp2048.o: fp2048.S fp.h fp_namespace.h uintbig.h uintbig_namespace.h Makefile
-	$(SCC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-c fp2048.S
-
-fp2048.o: fp2048.S fp.h fp_namespace.h uintbig.h uintbig_namespace.h Makefile
-	$(SCC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-c fp2048.S
-
-uintbig2048.o: uintbig2048.S uintbig.h uintbig_namespace.h Makefile
-	$(SCC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-c uintbig2048.S
-
-uintbig2048.o: uintbig2048.S uintbig.h uintbig_namespace.h Makefile
-	$(SCC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \
-		-c uintbig2048.S
 
 uintbig2048.o: uintbig2048.S uintbig.h uintbig_namespace.h Makefile
 	$(SCC) -DBITS=2048 -D'NAMESPACEBITS(x)=highctidh_2048_##x' -D'NAMESPACEGENERIC(x)=highctidh_##x' \

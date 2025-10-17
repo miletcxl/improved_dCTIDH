@@ -14,7 +14,7 @@ bool fp_issquare(fp x)
   fp origx;
   fp_copy(origx,x);
   fp r0;
-  fp_copy(r0, x);
+  fp_copy(r0,x);
   fp r1;
   fp_sqr(r1,r0);
   fp r2;
@@ -100,7 +100,7 @@ bool fp_issquare(fp x)
   fp_mul(r1,r1,r41);
   fp r42;
   fp_mul(r42,r23,r1);
-  fp_sqr(r42,r42);
+  fp_sq1(&r42);
   fp_mul(r42,r42,r23);
   fp_sq1_rep(r42,7);
   fp_mul(r42,r42,r25);
@@ -635,7 +635,8 @@ bool fp_issquare(fp x)
   fp_sq1_rep(r0,6);
   fp_mul(r0,r0,r26);
   fp_sq1_rep(r0,62);
-  fp_copy(x, r0);
-  fp check; fp_sqr(check,x);
+  fp_copy(x,r0);
+  fp check;
+  fp_sqr(check,x);
   return fp_isequal(check,origx);
 }

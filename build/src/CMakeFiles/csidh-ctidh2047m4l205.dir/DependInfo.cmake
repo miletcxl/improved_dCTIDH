@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/25336/school/dCTIDH/src/CTIDH/ctidh.c" "src/CMakeFiles/csidh-ctidh2047m4l205.dir/CTIDH/ctidh.c.o" "gcc" "src/CMakeFiles/csidh-ctidh2047m4l205.dir/CTIDH/ctidh.c.o.d"
+  "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/CTIDH/ctidh.c" "src/CMakeFiles/csidh-ctidh2047m4l205.dir/CTIDH/ctidh.c.o" "gcc" "src/CMakeFiles/csidh-ctidh2047m4l205.dir/CTIDH/ctidh.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

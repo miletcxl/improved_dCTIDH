@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/dCTIDH
+CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/dCTIDH/build
+CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/elligator-ctidh2047m6l194.dir/depend.make
@@ -70,18 +70,18 @@ include src/CMakeFiles/elligator-ctidh2047m6l194.dir/progress.make
 include src/CMakeFiles/elligator-ctidh2047m6l194.dir/flags.make
 
 src/CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o: src/CMakeFiles/elligator-ctidh2047m6l194.dir/flags.make
-src/CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o: /mnt/c/Users/25336/school/dCTIDH/src/common/elligator.c
+src/CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o: /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/elligator.c
 src/CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o: src/CMakeFiles/elligator-ctidh2047m6l194.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/25336/school/dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o -MF CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o.d -o CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o -c /mnt/c/Users/25336/school/dCTIDH/src/common/elligator.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o -MF CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o.d -o CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/elligator.c
 
 src/CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.i"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/25336/school/dCTIDH/src/common/elligator.c > CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.i
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/elligator.c > CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.i
 
 src/CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.s"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/25336/school/dCTIDH/src/common/elligator.c -o CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.s
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/elligator.c -o CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.s
 
 elligator-ctidh2047m6l194: src/CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o
 elligator-ctidh2047m6l194: src/CMakeFiles/elligator-ctidh2047m6l194.dir/build.make
@@ -92,10 +92,10 @@ src/CMakeFiles/elligator-ctidh2047m6l194.dir/build: elligator-ctidh2047m6l194
 .PHONY : src/CMakeFiles/elligator-ctidh2047m6l194.dir/build
 
 src/CMakeFiles/elligator-ctidh2047m6l194.dir/clean:
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/elligator-ctidh2047m6l194.dir/cmake_clean.cmake
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/elligator-ctidh2047m6l194.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/elligator-ctidh2047m6l194.dir/clean
 
 src/CMakeFiles/elligator-ctidh2047m6l194.dir/depend:
-	cd /mnt/c/Users/25336/school/dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/dCTIDH /mnt/c/Users/25336/school/dCTIDH/src /mnt/c/Users/25336/school/dCTIDH/build /mnt/c/Users/25336/school/dCTIDH/build/src /mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/elligator-ctidh2047m6l194.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/YEST/improved_dCTIDH /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/elligator-ctidh2047m6l194.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/elligator-ctidh2047m6l194.dir/depend
 

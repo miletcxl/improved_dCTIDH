@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/dCTIDH
+CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/dCTIDH/build
+CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/secsidh-ctidh2047m1l226.dir/depend.make
@@ -74,19 +74,19 @@ secsidh__ctidh2047m1l226_OBJECTS =
 
 # External object files for target secsidh-ctidh2047m1l226
 secsidh__ctidh2047m1l226_EXTERNAL_OBJECTS = \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/uint-2047m1l226.dir/common/uintbig2047m1l226.s.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/primes-ctidh2047m1l226.dir/common/primes2047m1l226.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/poly-ctidh2047m1l226.dir/common/poly.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/elligator-ctidh2047m1l226.dir/common/elligator.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/skgen-ctidh2047m1l226.dir/common/skgen.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/csidh-ctidh2047m1l226.dir/CTIDH/ctidh.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/steps-ctidh2047m1l226.dir/common/steps.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/random-ctidh2047m1l226.dir/common/random.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/steps_t-ctidh2047m1l226.dir/common/steps_tunemults2047m1l226.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/int32_sort.dir/common/int32_sort.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fips202.dir/common/fips202.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o"
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/uint-2047m1l226.dir/common/uintbig2047m1l226.s.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/primes-ctidh2047m1l226.dir/common/primes2047m1l226.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/poly-ctidh2047m1l226.dir/common/poly.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/elligator-ctidh2047m1l226.dir/common/elligator.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/skgen-ctidh2047m1l226.dir/common/skgen.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/csidh-ctidh2047m1l226.dir/CTIDH/ctidh.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/steps-ctidh2047m1l226.dir/common/steps.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/random-ctidh2047m1l226.dir/common/random.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/steps_t-ctidh2047m1l226.dir/common/steps_tunemults2047m1l226.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/int32_sort.dir/common/int32_sort.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fips202.dir/common/fips202.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o"
 
 src/libsecsidh-ctidh2047m1l226.a: src/CMakeFiles/uint-2047m1l226.dir/common/uintbig2047m1l226.s.o
 src/libsecsidh-ctidh2047m1l226.a: src/CMakeFiles/primes-ctidh2047m1l226.dir/common/primes2047m1l226.c.o
@@ -103,19 +103,19 @@ src/libsecsidh-ctidh2047m1l226.a: src/CMakeFiles/fips202.dir/common/fips202.c.o
 src/libsecsidh-ctidh2047m1l226.a: src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o
 src/libsecsidh-ctidh2047m1l226.a: src/CMakeFiles/secsidh-ctidh2047m1l226.dir/build.make
 src/libsecsidh-ctidh2047m1l226.a: src/CMakeFiles/secsidh-ctidh2047m1l226.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/25336/school/dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking C static library libsecsidh-ctidh2047m1l226.a"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/secsidh-ctidh2047m1l226.dir/cmake_clean_target.cmake
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/secsidh-ctidh2047m1l226.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking C static library libsecsidh-ctidh2047m1l226.a"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/secsidh-ctidh2047m1l226.dir/cmake_clean_target.cmake
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/secsidh-ctidh2047m1l226.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/secsidh-ctidh2047m1l226.dir/build: src/libsecsidh-ctidh2047m1l226.a
 .PHONY : src/CMakeFiles/secsidh-ctidh2047m1l226.dir/build
 
 src/CMakeFiles/secsidh-ctidh2047m1l226.dir/clean:
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/secsidh-ctidh2047m1l226.dir/cmake_clean.cmake
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/secsidh-ctidh2047m1l226.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/secsidh-ctidh2047m1l226.dir/clean
 
 src/CMakeFiles/secsidh-ctidh2047m1l226.dir/depend:
-	cd /mnt/c/Users/25336/school/dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/dCTIDH /mnt/c/Users/25336/school/dCTIDH/src /mnt/c/Users/25336/school/dCTIDH/build /mnt/c/Users/25336/school/dCTIDH/build/src /mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/secsidh-ctidh2047m1l226.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/YEST/improved_dCTIDH /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/secsidh-ctidh2047m1l226.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/secsidh-ctidh2047m1l226.dir/depend
 

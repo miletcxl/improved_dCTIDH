@@ -110,7 +110,7 @@ valgrind ./main/checkct-2047m6l194.main
 ```sh
 # 初步搜索
 cd scripts/greedy/
-./cxl_greedy.py
+./rough_greedy.py
 
 #精细搜索
 cd scripts/greedy/
@@ -128,3 +128,4 @@ cd scripts/new_primes/genSteps
 
 # 生成文件移至common
 ```
+如果您需要使用在大数乘法中使用adx（adox、adcx），请将 uintbig2047m1l226.s 最后的mul修改为15次adox + adcx循环

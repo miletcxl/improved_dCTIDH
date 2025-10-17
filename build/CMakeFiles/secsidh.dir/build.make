@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/dCTIDH
+CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/dCTIDH/build
+CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/secsidh.dir/depend.make
@@ -74,64 +74,64 @@ secsidh_OBJECTS =
 
 # External object files for target secsidh
 secsidh_EXTERNAL_OBJECTS = \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/csidh-ctidh2047m1l226.dir/CTIDH/ctidh.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/ctidh-2047m1l226.dir/CTIDH/ctidh_api.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/uint-2047m1l226.dir/common/uintbig2047m1l226.s.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/primes-ctidh2047m1l226.dir/common/primes2047m1l226.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m1l226.dir/common/fp/fp-counters.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m1l226.dir/common/fp/karatsuba/fp-karatsuba.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m1l226.dir/common/fp/fp_inv2047m1l226.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m1l226.dir/common/fp/fp_sqrt2047m1l226.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m1l226.dir/common/fp/karatsuba/fp2047m1l226.s.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m1l226.dir/common/fp/fp2.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/poly-ctidh2047m1l226.dir/common/poly.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/elligator-ctidh2047m1l226.dir/common/elligator.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/skgen-ctidh2047m1l226.dir/common/skgen.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/validate-ctidh2047m1l226.dir/common/validate.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/steps-ctidh2047m1l226.dir/common/steps.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/random-ctidh2047m1l226.dir/common/random.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/steps_t-ctidh2047m1l226.dir/common/steps_tunemults2047m1l226.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/int32_sort.dir/common/int32_sort.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fips202.dir/common/fips202.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/csidh-ctidh2047m4l205.dir/CTIDH/ctidh.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/ctidh-2047m4l205.dir/CTIDH/ctidh_api.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/uint-2047m4l205.dir/common/uintbig2047m4l205.s.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/primes-ctidh2047m4l205.dir/common/primes2047m4l205.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m4l205.dir/common/fp/fp-counters.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m4l205.dir/common/fp/karatsuba/fp-karatsuba.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m4l205.dir/common/fp/fp_inv2047m4l205.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m4l205.dir/common/fp/fp_sqrt2047m4l205.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m4l205.dir/common/fp/karatsuba/fp2047m4l205.s.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m4l205.dir/common/fp/fp2.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/poly-ctidh2047m4l205.dir/common/poly.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/mont-ctidh2047m4l205.dir/common/mont.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/elligator-ctidh2047m4l205.dir/common/elligator.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/skgen-ctidh2047m4l205.dir/common/skgen.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/validate-ctidh2047m4l205.dir/common/validate.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/steps-ctidh2047m4l205.dir/common/steps.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/random-ctidh2047m4l205.dir/common/random.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/steps_t-ctidh2047m4l205.dir/common/steps_tunemults2047m4l205.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/csidh-ctidh2047m6l194.dir/CTIDH/ctidh.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp-counters.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m6l194.dir/common/fp/karatsuba/fp-karatsuba.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp_inv2047m6l194.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp_sqrt2047m6l194.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m6l194.dir/common/fp/karatsuba/fp2047m6l194.s.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp2.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/poly-ctidh2047m6l194.dir/common/poly.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/mont-ctidh2047m6l194.dir/common/mont.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/skgen-ctidh2047m6l194.dir/common/skgen.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/validate-ctidh2047m6l194.dir/common/validate.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/steps-ctidh2047m6l194.dir/common/steps.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/random-ctidh2047m6l194.dir/common/random.c.o" \
-"/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/steps_t-ctidh2047m6l194.dir/common/steps_tunemults2047m6l194.c.o"
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/csidh-ctidh2047m1l226.dir/CTIDH/ctidh.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/ctidh-2047m1l226.dir/CTIDH/ctidh_api.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/uint-2047m1l226.dir/common/uintbig2047m1l226.s.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/primes-ctidh2047m1l226.dir/common/primes2047m1l226.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m1l226.dir/common/fp/fp-counters.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m1l226.dir/common/fp/karatsuba/fp-karatsuba.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m1l226.dir/common/fp/fp_inv2047m1l226.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m1l226.dir/common/fp/fp_sqrt2047m1l226.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m1l226.dir/common/fp/karatsuba/fp2047m1l226.s.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m1l226.dir/common/fp/fp2.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/poly-ctidh2047m1l226.dir/common/poly.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/elligator-ctidh2047m1l226.dir/common/elligator.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/skgen-ctidh2047m1l226.dir/common/skgen.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/validate-ctidh2047m1l226.dir/common/validate.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/steps-ctidh2047m1l226.dir/common/steps.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/random-ctidh2047m1l226.dir/common/random.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/steps_t-ctidh2047m1l226.dir/common/steps_tunemults2047m1l226.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/int32_sort.dir/common/int32_sort.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fips202.dir/common/fips202.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/karatsuba_fp_sqr.dir/common/fp/karatsuba/sqr.s.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/csidh-ctidh2047m4l205.dir/CTIDH/ctidh.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/ctidh-2047m4l205.dir/CTIDH/ctidh_api.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/uint-2047m4l205.dir/common/uintbig2047m4l205.s.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/primes-ctidh2047m4l205.dir/common/primes2047m4l205.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m4l205.dir/common/fp/fp-counters.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m4l205.dir/common/fp/karatsuba/fp-karatsuba.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m4l205.dir/common/fp/fp_inv2047m4l205.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m4l205.dir/common/fp/fp_sqrt2047m4l205.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m4l205.dir/common/fp/karatsuba/fp2047m4l205.s.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m4l205.dir/common/fp/fp2.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/poly-ctidh2047m4l205.dir/common/poly.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/mont-ctidh2047m4l205.dir/common/mont.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/elligator-ctidh2047m4l205.dir/common/elligator.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/skgen-ctidh2047m4l205.dir/common/skgen.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/validate-ctidh2047m4l205.dir/common/validate.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/steps-ctidh2047m4l205.dir/common/steps.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/random-ctidh2047m4l205.dir/common/random.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/steps_t-ctidh2047m4l205.dir/common/steps_tunemults2047m4l205.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/csidh-ctidh2047m6l194.dir/CTIDH/ctidh.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp-counters.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m6l194.dir/common/fp/karatsuba/fp-karatsuba.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp_inv2047m6l194.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp_sqrt2047m6l194.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m6l194.dir/common/fp/karatsuba/fp2047m6l194.s.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp2.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/poly-ctidh2047m6l194.dir/common/poly.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/mont-ctidh2047m6l194.dir/common/mont.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/elligator-ctidh2047m6l194.dir/common/elligator.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/skgen-ctidh2047m6l194.dir/common/skgen.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/validate-ctidh2047m6l194.dir/common/validate.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/steps-ctidh2047m6l194.dir/common/steps.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/random-ctidh2047m6l194.dir/common/random.c.o" \
+"/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/steps_t-ctidh2047m6l194.dir/common/steps_tunemults2047m6l194.c.o"
 
 lib/libsecsidh.a: src/CMakeFiles/csidh-ctidh2047m1l226.dir/CTIDH/ctidh.c.o
 lib/libsecsidh.a: src/CMakeFiles/ctidh-2047m1l226.dir/CTIDH/ctidh_api.c.o
@@ -193,7 +193,7 @@ lib/libsecsidh.a: src/CMakeFiles/random-ctidh2047m6l194.dir/common/random.c.o
 lib/libsecsidh.a: src/CMakeFiles/steps_t-ctidh2047m6l194.dir/common/steps_tunemults2047m6l194.c.o
 lib/libsecsidh.a: CMakeFiles/secsidh.dir/build.make
 lib/libsecsidh.a: CMakeFiles/secsidh.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/25336/school/dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking C static library lib/libsecsidh.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking C static library lib/libsecsidh.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/secsidh.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/secsidh.dir/link.txt --verbose=$(VERBOSE)
 
@@ -206,6 +206,6 @@ CMakeFiles/secsidh.dir/clean:
 .PHONY : CMakeFiles/secsidh.dir/clean
 
 CMakeFiles/secsidh.dir/depend:
-	cd /mnt/c/Users/25336/school/dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/dCTIDH /mnt/c/Users/25336/school/dCTIDH /mnt/c/Users/25336/school/dCTIDH/build /mnt/c/Users/25336/school/dCTIDH/build /mnt/c/Users/25336/school/dCTIDH/build/CMakeFiles/secsidh.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/YEST/improved_dCTIDH /mnt/c/Users/25336/school/YEST/improved_dCTIDH /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/CMakeFiles/secsidh.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/secsidh.dir/depend
 

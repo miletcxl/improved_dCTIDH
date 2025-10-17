@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/25336/school/dCTIDH
+# Install script for directory: /mnt/c/Users/25336/school/YEST/improved_dCTIDH
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,20 +43,20 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/mnt/c/Users/25336/school/dCTIDH/build/lib/libsecsidh.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/lib/libsecsidh.a")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/secsidh" TYPE FILE FILES
-    "/mnt/c/Users/25336/school/dCTIDH/src/secsidh.h"
-    "/mnt/c/Users/25336/school/dCTIDH/build/include/secsidh/secsidhconfig.h"
+    "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/secsidh.h"
+    "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/include/secsidh/secsidhconfig.h"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/c/Users/25336/school/dCTIDH/build/src/cmake_install.cmake")
-  include("/mnt/c/Users/25336/school/dCTIDH/build/main/cmake_install.cmake")
+  include("/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/cmake_install.cmake")
+  include("/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/main/cmake_install.cmake")
 
 endif()
 
@@ -68,5 +68,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/25336/school/dCTIDH/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

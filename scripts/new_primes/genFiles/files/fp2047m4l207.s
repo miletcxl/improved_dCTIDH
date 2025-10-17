@@ -13,19 +13,19 @@
 fp_sq_counter: .quad 0 
 
 
-.global secsidh_internal_2047m7l188_p
-secsidh_internal_2047m7l188_p:
+.global secsidh_internal_2047m4l207_p
+secsidh_internal_2047m4l207_p:
     .quad 0xffffffffffffffff, 0xffffffffffffffff, 0xffffffffffffffff, 0xffffffffffffffff
-    .quad 0xffffffffffffffff, 0xffffffffffffffff, 0xffffffffffffffff, 0x384a0754ada123f3
-    .quad 0xb7057521324fb4b2, 0x4d17aa4175667633, 0xad1914cb78495fba, 0x1c6f4d88b55c0275
-    .quad 0xfc18236edac1633c, 0xacc896bb8a819992, 0x51222129bbcf0a64, 0xbf0ad4ace3bdce07
-    .quad 0x3ff6da1a685448a8, 0x61fee929097b1848, 0x6dc9de0773988ba8, 0x7a09467acc435611
-    .quad 0x3ce02fa223c2c0f8, 0xf387032fe7c7aa44, 0x84ded2d6ffeab144, 0x7d8c979cb272334a
-    .quad 0xf17c971e086093a6, 0xd1fa253d07e714b2, 0x974bee85e60d4765, 0xc9341a3b27cd22b6
-    .quad 0x2da13a370bc11b14, 0x628a0ca54a584b54, 0x53e678c5f5d9768d, 0x739a199813602f59
+    .quad 0x5d2792fcea42b018, 0xb6725ecd7ca11504, 0x86b544f84145592b, 0x81d3c1adc7977dae
+    .quad 0x33b715b3006c130f, 0x4fa2428dee7a6adb, 0x0b3ccc301164bf3d, 0xca424f13b2245791
+    .quad 0x7439f13a079a8e3d, 0xe16d5dababf5eb8e, 0x99e91c9c1a7ba3ef, 0x4d2941916adc762a
+    .quad 0xab650062b36ab380, 0xfbdd2704e6b89357, 0xfcc0206c307af401, 0xa30e106b711c3db8
+    .quad 0x9083164f44c3d435, 0x094f0b805d59656b, 0x939f23a53617c370, 0x9be8e968486eb7e8
+    .quad 0x1609c664b7e30d83, 0x104b0031b0d5bda4, 0x8443ae7f5307c867, 0x484a1a0ed2abee7e
+    .quad 0xf72c45b079e435d4, 0x9875bd5d246f2d35, 0xde35711dac11d84c, 0x6c76ac40b24e2eda
 
-.global secsidh_internal_2047m7l188_inv_min_p_mod_r /* -p^-1 mod 2^64 */
-secsidh_internal_2047m7l188_.inv_min_p_mod_r:
+.global secsidh_internal_2047m4l207_inv_min_p_mod_r /* -p^-1 mod 2^64 */
+secsidh_internal_2047m4l207_.inv_min_p_mod_r:
     .quad 1, 0, 0, 0
     .quad 0, 0, 0, 0
     .quad 0, 0, 0, 0
@@ -35,73 +35,73 @@ secsidh_internal_2047m7l188_.inv_min_p_mod_r:
     .quad 0, 0, 0, 0
     .quad 0, 0, 0, 0
 
-.global secsidh_internal_2047m7l188_redc_alpha
-secsidh_internal_2047m7l188_redc_alpha:
-    .quad 0, 0, 0, 0
-    .quad 0, 0, 0x384a0754ada123f4, 0xb7057521324fb4b2
-    .quad 0x4d17aa4175667633, 0xad1914cb78495fba, 0x1c6f4d88b55c0275, 0xfc18236edac1633c
-    .quad 0xacc896bb8a819992, 0x51222129bbcf0a64, 0xbf0ad4ace3bdce07, 0x3ff6da1a685448a8
-    .quad 0x61fee929097b1848, 0x6dc9de0773988ba8, 0x7a09467acc435611, 0x3ce02fa223c2c0f8
-    .quad 0xf387032fe7c7aa44, 0x84ded2d6ffeab144, 0x7d8c979cb272334a, 0xf17c971e086093a6
-    .quad 0xd1fa253d07e714b2, 0x974bee85e60d4765, 0xc9341a3b27cd22b6, 0x2da13a370bc11b14
-    .quad 0x628a0ca54a584b54, 0x53e678c5f5d9768d, 0x739a199813602f59, 0
+.global secsidh_internal_2047m4l207_redc_alpha
+secsidh_internal_2047m4l207_redc_alpha:
+    .quad 0, 0, 0, 0x5d2792fcea42b019
+    .quad 0xb6725ecd7ca11504, 0x86b544f84145592b, 0x81d3c1adc7977dae, 0x33b715b3006c130f
+    .quad 0x4fa2428dee7a6adb, 0x0b3ccc301164bf3d, 0xca424f13b2245791, 0x7439f13a079a8e3d
+    .quad 0xe16d5dababf5eb8e, 0x99e91c9c1a7ba3ef, 0x4d2941916adc762a, 0xab650062b36ab380
+    .quad 0xfbdd2704e6b89357, 0xfcc0206c307af401, 0xa30e106b711c3db8, 0x9083164f44c3d435
+    .quad 0x094f0b805d59656b, 0x939f23a53617c370, 0x9be8e968486eb7e8, 0x1609c664b7e30d83
+    .quad 0x104b0031b0d5bda4, 0x8443ae7f5307c867, 0x484a1a0ed2abee7e, 0xf72c45b079e435d4
+    .quad 0x9875bd5d246f2d35, 0xde35711dac11d84c, 0x6c76ac40b24e2eda, 0
 
-.global secsidh_internal_2047m7l188_fp_0
-secsidh_internal_2047m7l188_fp_0:
+.global secsidh_internal_2047m4l207_fp_0
+secsidh_internal_2047m4l207_fp_0:
     .zero 256
 
-.global secsidh_internal_2047m7l188_fp_1
-secsidh_internal_2047m7l188_fp_1: /* 2^2048 mod p */
+.global secsidh_internal_2047m4l207_fp_1
+secsidh_internal_2047m4l207_fp_1: /* 2^2048 mod p */
     .quad 2, 0, 0, 0
-    .quad 0, 0, 0, 0x8f6bf156a4bdb818
-    .quad 0x91f515bd9b60969b, 0x65d0ab7d15331398, 0xa5cdd6690f6d408b, 0xc72164ee9547fb14
-    .quad 0x07cfb9224a7d3987, 0xa66ed288eafcccda, 0x5dbbbdac8861eb36, 0x81ea56a6388463f1
-    .quad 0x80124bcb2f576eae, 0x3c022daded09cf6f, 0x246c43f118cee8af, 0x0bed730a677953dd
-    .quad 0x863fa0bbb87a7e0f, 0x18f1f9a03070ab77, 0xf6425a52002a9d76, 0x04e6d0c69b1b996a
-    .quad 0x1d06d1c3ef3ed8b3, 0x5c0bb585f031d69a, 0xd16822f433e57134, 0x6d97cb89b065ba92
-    .quad 0xa4bd8b91e87dc9d6, 0x3aebe6b56b4f6957, 0x58330e74144d12e5, 0x18cbcccfd93fa14d
+    .quad 0x45b0da062b7a9fce, 0x931b426506bdd5f7, 0xf295760f7d754da8, 0xfc587ca470d104a2
+    .quad 0x9891d499ff27d9e0, 0x60bb7ae4230b2a49, 0xe986679fdd368185, 0x6b7b61d89bb750dd
+    .quad 0x178c1d8bf0cae384, 0x3d2544a8a81428e3, 0xcc2dc6c7cb08b820, 0x65ad7cdd2a4713aa
+    .quad 0xa935ff3a992a98ff, 0x0845b1f6328ed950, 0x067fbf279f0a17fc, 0xb9e3df291dc7848e
+    .quad 0xdef9d36176785794, 0xed61e8ff454d3528, 0xd8c1b8b593d0791f, 0xc82e2d2f6f22902e
+    .quad 0xd3ec73369039e4f8, 0xdf69ff9c9e5484b7, 0xf778a30159f06f31, 0x6f6bcbe25aa82302
+    .quad 0x11a7749f0c379457, 0xcf148545b721a594, 0x43951dc4a7dc4f66, 0x2712a77e9b63a24a
 
-.global secsidh_internal_2047m7l188_fp_2
-secsidh_internal_2047m7l188_fp_2: /* 2^2049 mod p */
+.global secsidh_internal_2047m4l207_fp_2
+secsidh_internal_2047m4l207_fp_2: /* 2^2049 mod p */
     .quad 4, 0, 0, 0
-    .quad 0, 0, 0, 0x1ed7e2ad497b7030
-    .quad 0x23ea2b7b36c12d37, 0xcba156fa2a662731, 0x4b9bacd21eda8116, 0x8e42c9dd2a8ff629
-    .quad 0x0f9f724494fa730f, 0x4cdda511d5f999b4, 0xbb777b5910c3d66d, 0x03d4ad4c7108c7e2
-    .quad 0x002497965eaedd5d, 0x78045b5bda139edf, 0x48d887e2319dd15e, 0x17dae614cef2a7ba
-    .quad 0x0c7f417770f4fc1e, 0x31e3f34060e156ef, 0xec84b4a400553aec, 0x09cda18d363732d5
-    .quad 0x3a0da387de7db166, 0xb8176b0be063ad34, 0xa2d045e867cae268, 0xdb2f971360cb7525
-    .quad 0x497b1723d0fb93ac, 0x75d7cd6ad69ed2af, 0xb0661ce8289a25ca, 0x3197999fb27f429a
+    .quad 0x8b61b40c56f53f9c, 0x263684ca0d7babee, 0xe52aec1efaea9b51, 0xf8b0f948e1a20945
+    .quad 0x3123a933fe4fb3c1, 0xc176f5c846165493, 0xd30ccf3fba6d030a, 0xd6f6c3b1376ea1bb
+    .quad 0x2f183b17e195c708, 0x7a4a8951502851c6, 0x985b8d8f96117040, 0xcb5af9ba548e2755
+    .quad 0x526bfe75325531fe, 0x108b63ec651db2a1, 0x0cff7e4f3e142ff8, 0x73c7be523b8f091c
+    .quad 0xbdf3a6c2ecf0af29, 0xdac3d1fe8a9a6a51, 0xb183716b27a0f23f, 0x905c5a5ede45205d
+    .quad 0xa7d8e66d2073c9f1, 0xbed3ff393ca9096f, 0xeef14602b3e0de63, 0xded797c4b5504605
+    .quad 0x234ee93e186f28ae, 0x9e290a8b6e434b28, 0x872a3b894fb89ecd, 0x4e254efd36c74494
 
-.global secsidh_internal_2047m7l188_r_squared_mod_p
-secsidh_internal_2047m7l188_r_squared_mod_p: /* (2^2048)^2 mod p */
-    .quad 0xb8c580d84c8f3081, 0x1e2e096b7ed718f5, 0x902bda37bac97f66, 0x61f1fd15a0e2eee0
-    .quad 0x8ecf080760586aa5, 0xa26a8d68f5df6182, 0x2b6cdb9cb44beec5, 0xf10a1befc7038cd3
-    .quad 0xd1cb5f97cc9b1e07, 0x3b0366f3fe36ccd3, 0x11507b7f767e8ff2, 0x69e847f8a61ff78d
-    .quad 0xcf9a02e37c6eedae, 0xdc47f0e04706d9db, 0xc1f80b1b529b0d95, 0x88ecf9ab9c47c136
-    .quad 0xbfa0b2b92b78e508, 0xe6e7d60ea47537e5, 0x28f11e9cc7f318d0, 0x8345baa0f10e3242
-    .quad 0x9d1ed13d2da4f07f, 0x945596111467138c, 0xb2a5db4d7cdf3771, 0x3ee7a5da628b560e
-    .quad 0x0d146225087aeae8, 0xdb8a5b35df0ba9d7, 0x592ea8bb312fe99a, 0x70667856e7a0c866
-    .quad 0x7f1f3c25736a01ee, 0x26708ed0c5d242bb, 0x17b0346f73ca3cdb, 0x66a7e4160922a21f
+.global secsidh_internal_2047m4l207_r_squared_mod_p
+secsidh_internal_2047m4l207_r_squared_mod_p: /* (2^2048)^2 mod p */
+    .quad 0x583cd2702b8d5daf, 0xd97d9cfa4e5bc501, 0x79c8379a5a098df7, 0x846af86c6ecef70e
+    .quad 0x46b28650549d69a7, 0xfb8516863072b0a8, 0x87004de39c1d839d, 0x25656e353a0f2f12
+    .quad 0x9ee4d83d348dc2b4, 0xce50ed94ee8377f4, 0xfc72b125583282ed, 0x970ffa4c235f1710
+    .quad 0xf3c358119abd6cec, 0x05e56cc2f8fba8bc, 0x72e0b552b601b5e5, 0xf19e39476fa7d731
+    .quad 0x8480192c34a8bebe, 0xae10ababf6e57770, 0x9fe48633aea9c282, 0x9dda45a51f69e498
+    .quad 0x2758eb9d60865d65, 0xe6f37e0a495289b2, 0x07c1d99f96c4b859, 0xac7cc23294efada5
+    .quad 0xa4ed3ad24c64a1d3, 0xae320c27cc9b90c6, 0x9dbf6ad731c9e954, 0xcaec2316e927e591
+    .quad 0xa5f0ae018d079c4b, 0x026e74ae0b54c9f2, 0xd424c1b87b9a9d9c, 0x2ce0085b0d83a52e
 
-.global secsidh_internal_2047m7l188_p_minus_2
-secsidh_internal_2047m7l188_p_minus_2:
+.global secsidh_internal_2047m4l207_p_minus_2
+secsidh_internal_2047m4l207_p_minus_2:
     .quad 0xfffffffffffffffd, 0xffffffffffffffff, 0xffffffffffffffff, 0xffffffffffffffff
-    .quad 0xffffffffffffffff, 0xffffffffffffffff, 0xffffffffffffffff, 0x384a0754ada123f3
-    .quad 0xb7057521324fb4b2, 0x4d17aa4175667633, 0xad1914cb78495fba, 0x1c6f4d88b55c0275
-    .quad 0xfc18236edac1633c, 0xacc896bb8a819992, 0x51222129bbcf0a64, 0xbf0ad4ace3bdce07
-    .quad 0x3ff6da1a685448a8, 0x61fee929097b1848, 0x6dc9de0773988ba8, 0x7a09467acc435611
-    .quad 0x3ce02fa223c2c0f8, 0xf387032fe7c7aa44, 0x84ded2d6ffeab144, 0x7d8c979cb272334a
-    .quad 0xf17c971e086093a6, 0xd1fa253d07e714b2, 0x974bee85e60d4765, 0xc9341a3b27cd22b6
-    .quad 0x2da13a370bc11b14, 0x628a0ca54a584b54, 0x53e678c5f5d9768d, 0x739a199813602f59
+    .quad 0x5d2792fcea42b018, 0xb6725ecd7ca11504, 0x86b544f84145592b, 0x81d3c1adc7977dae
+    .quad 0x33b715b3006c130f, 0x4fa2428dee7a6adb, 0x0b3ccc301164bf3d, 0xca424f13b2245791
+    .quad 0x7439f13a079a8e3d, 0xe16d5dababf5eb8e, 0x99e91c9c1a7ba3ef, 0x4d2941916adc762a
+    .quad 0xab650062b36ab380, 0xfbdd2704e6b89357, 0xfcc0206c307af401, 0xa30e106b711c3db8
+    .quad 0x9083164f44c3d435, 0x094f0b805d59656b, 0x939f23a53617c370, 0x9be8e968486eb7e8
+    .quad 0x1609c664b7e30d83, 0x104b0031b0d5bda4, 0x8443ae7f5307c867, 0x484a1a0ed2abee7e
+    .quad 0xf72c45b079e435d4, 0x9875bd5d246f2d35, 0xde35711dac11d84c, 0x6c76ac40b24e2eda
 
 .section .text
 
-.global secsidh_internal_2047m7l188_fp_word_redc
-secsidh_internal_2047m7l188_fp_word_redc:
+.global secsidh_internal_2047m4l207_fp_word_redc
+secsidh_internal_2047m4l207_fp_word_redc:
 push r14
 push r8
 sub rsp, 2*pbytes+8
-mov r14, secsidh_internal_2047m7l188_redc_alpha@GOTPCREL[rip]
+mov r14, secsidh_internal_2047m4l207_redc_alpha@GOTPCREL[rip]
 xor rax, rax
 xor r8, r8
 xor rcx, rcx
@@ -117,14 +117,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsi + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsi + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsi + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsi + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsi + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsi + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsi + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsi + 8*7]
@@ -399,14 +405,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -677,14 +689,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -951,14 +969,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -1221,14 +1245,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -1487,14 +1517,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -1749,14 +1785,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -2007,14 +2049,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -2261,14 +2309,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -2511,14 +2565,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -2757,14 +2817,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -2999,14 +3065,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -3237,14 +3309,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -3471,14 +3549,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -3701,14 +3785,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -3927,14 +4017,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -4149,14 +4245,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -4367,14 +4469,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -4581,14 +4689,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -4791,14 +4905,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -4997,14 +5117,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -5199,14 +5325,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -5397,14 +5529,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -5591,14 +5729,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -5781,14 +5925,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -5967,14 +6117,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -6149,14 +6305,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -6327,14 +6489,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -6501,14 +6669,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -6671,14 +6845,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -6837,14 +7017,20 @@ mov [rsp + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rsp + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rsp + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rsp + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rsp + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rsp + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rsp + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rsp + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -6999,14 +7185,20 @@ mov [rdi + 8*1], rax
 mov rax, [rsp + 8*3]
 mov [rdi + 8*2], rax
 
-mov rax, [rsp + 8*4]
-mov [rdi + 8*3], rax
+mulx rbx, rax, [r14 + 8*3]
+adcx rcx, [rsp + 8*4]
+adox rcx, rax
+mov [rdi + 8*3], rcx
 
-mov rax, [rsp + 8*5]
-mov [rdi + 8*4], rax
+mulx rcx, rax, [r14 + 8*4]
+adcx rbx, [rsp + 8*5]
+adox rbx, rax
+mov [rdi + 8*4], rbx
 
-mov rax, [rsp + 8*6]
-mov [rdi + 8*5], rax
+mulx rbx, rax, [r14 + 8*5]
+adcx rcx, [rsp + 8*6]
+adox rcx, rax
+mov [rdi + 8*5], rcx
 
 mulx rcx, rax, [r14 + 8*6]
 adcx rbx, [rsp + 8*7]
@@ -7144,15 +7336,15 @@ pop r8
 pop r14
 jmp .reduce_once
 
-.global secsidh_internal_2047m7l188_fp_copy
-secsidh_internal_2047m7l188_fp_copy:
+.global secsidh_internal_2047m4l207_fp_copy
+secsidh_internal_2047m4l207_fp_copy:
     cld
     mov rcx, plimbs
     rep movsq
     ret
 
-.global secsidh_internal_2047m7l188_fp_cmov
-secsidh_internal_2047m7l188_fp_cmov:
+.global secsidh_internal_2047m4l207_fp_cmov
+secsidh_internal_2047m4l207_fp_cmov:
     movzx rax, dl
     neg rax
     .set k, 0
@@ -7170,8 +7362,8 @@ secsidh_internal_2047m7l188_fp_cmov:
     .endr
     ret
 
-.global secsidh_internal_2047m7l188_fp_cswap
-secsidh_internal_2047m7l188_fp_cswap:
+.global secsidh_internal_2047m4l207_fp_cswap
+secsidh_internal_2047m4l207_fp_cswap:
     movzx rax, dl
     neg rax
     .set k, 0
@@ -7198,7 +7390,7 @@ secsidh_internal_2047m7l188_fp_cswap:
     push r12
     push r13
     mov rbp, rdi
-    mov r12, secsidh_internal_2047m7l188_p@GOTPCREL[rip]
+    mov r12, secsidh_internal_2047m4l207_p@GOTPCREL[rip]
 
     mov rdi, [rbp +  0]
     sub rdi, [r12]
@@ -7422,27 +7614,27 @@ secsidh_internal_2047m7l188_fp_cswap:
     pop rbp
     ret
 
-.global secsidh_internal_2047m7l188_fp_add2
-secsidh_internal_2047m7l188_fp_add2:
+.global secsidh_internal_2047m4l207_fp_add2
+secsidh_internal_2047m4l207_fp_add2:
   mov rdx, rdi
 
-.global secsidh_internal_2047m7l188_fp_add_s
-secsidh_internal_2047m7l188_fp_add_s:
+.global secsidh_internal_2047m4l207_fp_add_s
+secsidh_internal_2047m4l207_fp_add_s:
   push rdi
-  call secsidh_internal_2047m7l188_uintbig_add
+  call secsidh_internal_2047m4l207_uintbig_add
   pop rdi
 
   jmp .reduce_once
 
-.global secsidh_internal_2047m7l188_fp_sub2
-secsidh_internal_2047m7l188_fp_sub2:
+.global secsidh_internal_2047m4l207_fp_sub2
+secsidh_internal_2047m4l207_fp_sub2:
   mov rdx, rdi
   xchg rsi, rdx
 
-.global secsidh_internal_2047m7l188_fp_sub_s
-secsidh_internal_2047m7l188_fp_sub_s:
+.global secsidh_internal_2047m4l207_fp_sub_s
+secsidh_internal_2047m4l207_fp_sub_s:
   push rdi
-  call secsidh_internal_2047m7l188_uintbig_sub
+  call secsidh_internal_2047m4l207_uintbig_sub
   pop rdi
 
 
@@ -7450,7 +7642,7 @@ secsidh_internal_2047m7l188_fp_sub_s:
 
   sub rsp, pbytes
 
-  mov r8, secsidh_internal_2047m7l188_p@GOTPCREL[rip]
+  mov r8, secsidh_internal_2047m4l207_p@GOTPCREL[rip]
   mov rcx, [r8]
   and rcx, rax
   mov [rsp + 0],rcx
@@ -7479,24 +7671,24 @@ secsidh_internal_2047m7l188_fp_sub_s:
 
 /* Montgomery arithmetic */
 
-.global secsidh_internal_2047m7l188_fp_enc
-secsidh_internal_2047m7l188_fp_enc:
-    mov r8, secsidh_internal_2047m7l188_r_squared_mod_p@GOTPCREL[rip]
+.global secsidh_internal_2047m4l207_fp_enc
+secsidh_internal_2047m4l207_fp_enc:
+    mov r8, secsidh_internal_2047m4l207_r_squared_mod_p@GOTPCREL[rip]
     lea rdx, [r8]
-    jmp secsidh_internal_2047m7l188_fp_mul
+    jmp secsidh_internal_2047m4l207_fp_mul
 
-.global secsidh_internal_2047m7l188_fp_dec
-secsidh_internal_2047m7l188_fp_dec:
-    mov r8, secsidh_internal_2047m7l188_uintbig_1@GOTPCREL[rip]
+.global secsidh_internal_2047m4l207_fp_dec
+secsidh_internal_2047m4l207_fp_dec:
+    mov r8, secsidh_internal_2047m4l207_uintbig_1@GOTPCREL[rip]
     lea rdx, [r8]
-    jmp secsidh_internal_2047m7l188_fp_mul
+    jmp secsidh_internal_2047m4l207_fp_mul
 
 
 
 
 
-.global secsidh_internal_2047m7l188_fp_random
-secsidh_internal_2047m7l188_fp_random:
+.global secsidh_internal_2047m4l207_fp_random
+secsidh_internal_2047m4l207_fp_random:
 
     push rdi
     mov rsi, pbytes
@@ -7506,13 +7698,13 @@ secsidh_internal_2047m7l188_fp_random:
     shl rax, (pbits % 64)
     dec rax
     and [rdi + pbytes-8], rax
-    mov r8, secsidh_internal_2047m7l188_p@GOTPCREL[rip]
+    mov r8, secsidh_internal_2047m4l207_p@GOTPCREL[rip]
 
     .set k, plimbs-1
     .rept plimbs
         mov rax, [r8 + 8*k]
         cmp [rdi + 8*k], rax
-        jge secsidh_internal_2047m7l188_fp_random
+        jge secsidh_internal_2047m4l207_fp_random
         jl 0f
         .set k, k-1
     .endr
@@ -10712,13 +10904,13 @@ mult_32x32:
     mult_32x32
     ret
 
-.global secsidh_internal_2047m7l188_fp_mult_32x32
-secsidh_internal_2047m7l188_fp_mult_32x32:
+.global secsidh_internal_2047m4l207_fp_mult_32x32
+secsidh_internal_2047m4l207_fp_mult_32x32:
     mult_32x32
     ret
 
-.global  secsidh_internal_2047m7l188_fp_squaring
-secsidh_internal_2047m7l188_fp_squaring:
+.global  secsidh_internal_2047m4l207_fp_squaring
+secsidh_internal_2047m4l207_fp_squaring:
     sqr_32x32
     ret
 

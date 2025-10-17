@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/dCTIDH
+CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/dCTIDH/build
+CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/keccakf1600.dir/depend.make
@@ -70,18 +70,18 @@ include src/CMakeFiles/keccakf1600.dir/progress.make
 include src/CMakeFiles/keccakf1600.dir/flags.make
 
 src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o: src/CMakeFiles/keccakf1600.dir/flags.make
-src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o: /mnt/c/Users/25336/school/dCTIDH/src/common/keccakf1600.c
+src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o: /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/keccakf1600.c
 src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o: src/CMakeFiles/keccakf1600.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/25336/school/dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o -MF CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o.d -o CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o -c /mnt/c/Users/25336/school/dCTIDH/src/common/keccakf1600.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o -MF CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o.d -o CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/keccakf1600.c
 
 src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/keccakf1600.dir/common/keccakf1600.c.i"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/25336/school/dCTIDH/src/common/keccakf1600.c > CMakeFiles/keccakf1600.dir/common/keccakf1600.c.i
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/keccakf1600.c > CMakeFiles/keccakf1600.dir/common/keccakf1600.c.i
 
 src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/keccakf1600.dir/common/keccakf1600.c.s"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/25336/school/dCTIDH/src/common/keccakf1600.c -o CMakeFiles/keccakf1600.dir/common/keccakf1600.c.s
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/keccakf1600.c -o CMakeFiles/keccakf1600.dir/common/keccakf1600.c.s
 
 keccakf1600: src/CMakeFiles/keccakf1600.dir/common/keccakf1600.c.o
 keccakf1600: src/CMakeFiles/keccakf1600.dir/build.make
@@ -92,10 +92,10 @@ src/CMakeFiles/keccakf1600.dir/build: keccakf1600
 .PHONY : src/CMakeFiles/keccakf1600.dir/build
 
 src/CMakeFiles/keccakf1600.dir/clean:
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/keccakf1600.dir/cmake_clean.cmake
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/keccakf1600.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/keccakf1600.dir/clean
 
 src/CMakeFiles/keccakf1600.dir/depend:
-	cd /mnt/c/Users/25336/school/dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/dCTIDH /mnt/c/Users/25336/school/dCTIDH/src /mnt/c/Users/25336/school/dCTIDH/build /mnt/c/Users/25336/school/dCTIDH/build/src /mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/keccakf1600.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/YEST/improved_dCTIDH /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/keccakf1600.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/keccakf1600.dir/depend
 

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/mnt/c/Users/25336/school/dCTIDH/src/common/uintbig2047m6l194.s" "/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.o"
+  "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/uintbig2047m6l194.s" "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.o"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 

@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_ASM
-  "/mnt/c/Users/25336/school/dCTIDH/src/common/fp/karatsuba/fp2047m6l194.s" "/mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/fp-2047m6l194.dir/common/fp/karatsuba/fp2047m6l194.s.o"
+  "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/karatsuba/fp2047m6l194.s" "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/fp-2047m6l194.dir/common/fp/karatsuba/fp2047m6l194.s.o"
   )
 set(CMAKE_ASM_COMPILER_ID "GNU")
 
@@ -25,16 +25,16 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "include"
-  "/mnt/c/Users/25336/school/dCTIDH/src/CSIDH/csidh-2047m6l194"
+  "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/CSIDH/csidh-2047m6l194"
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/25336/school/dCTIDH/src/common/fp/fp-counters.c" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp-counters.c.o" "gcc" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp-counters.c.o.d"
-  "/mnt/c/Users/25336/school/dCTIDH/src/common/fp/fp2.c" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp2.c.o" "gcc" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp2.c.o.d"
-  "/mnt/c/Users/25336/school/dCTIDH/src/common/fp/fp_inv2047m6l194.c" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp_inv2047m6l194.c.o" "gcc" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp_inv2047m6l194.c.o.d"
-  "/mnt/c/Users/25336/school/dCTIDH/src/common/fp/fp_sqrt2047m6l194.c" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp_sqrt2047m6l194.c.o" "gcc" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp_sqrt2047m6l194.c.o.d"
-  "/mnt/c/Users/25336/school/dCTIDH/src/common/fp/karatsuba/fp-karatsuba.c" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/karatsuba/fp-karatsuba.c.o" "gcc" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/karatsuba/fp-karatsuba.c.o.d"
+  "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/fp-counters.c" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp-counters.c.o" "gcc" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp-counters.c.o.d"
+  "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/fp2.c" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp2.c.o" "gcc" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp2.c.o.d"
+  "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/fp_inv2047m6l194.c" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp_inv2047m6l194.c.o" "gcc" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp_inv2047m6l194.c.o.d"
+  "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/fp_sqrt2047m6l194.c" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp_sqrt2047m6l194.c.o" "gcc" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/fp_sqrt2047m6l194.c.o.d"
+  "/mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/fp/karatsuba/fp-karatsuba.c" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/karatsuba/fp-karatsuba.c.o" "gcc" "src/CMakeFiles/fp-2047m6l194.dir/common/fp/karatsuba/fp-karatsuba.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

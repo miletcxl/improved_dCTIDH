@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/dCTIDH
+CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/dCTIDH/build
+CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/primes-ctidh2047m6l194.dir/depend.make
@@ -70,18 +70,18 @@ include src/CMakeFiles/primes-ctidh2047m6l194.dir/progress.make
 include src/CMakeFiles/primes-ctidh2047m6l194.dir/flags.make
 
 src/CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o: src/CMakeFiles/primes-ctidh2047m6l194.dir/flags.make
-src/CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o: /mnt/c/Users/25336/school/dCTIDH/src/common/primes2047m6l194.c
+src/CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o: /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/primes2047m6l194.c
 src/CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o: src/CMakeFiles/primes-ctidh2047m6l194.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/25336/school/dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o -MF CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o.d -o CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o -c /mnt/c/Users/25336/school/dCTIDH/src/common/primes2047m6l194.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o -MF CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o.d -o CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/primes2047m6l194.c
 
 src/CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.i"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/25336/school/dCTIDH/src/common/primes2047m6l194.c > CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.i
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/primes2047m6l194.c > CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.i
 
 src/CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.s"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/25336/school/dCTIDH/src/common/primes2047m6l194.c -o CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.s
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/primes2047m6l194.c -o CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.s
 
 primes-ctidh2047m6l194: src/CMakeFiles/primes-ctidh2047m6l194.dir/common/primes2047m6l194.c.o
 primes-ctidh2047m6l194: src/CMakeFiles/primes-ctidh2047m6l194.dir/build.make
@@ -92,10 +92,10 @@ src/CMakeFiles/primes-ctidh2047m6l194.dir/build: primes-ctidh2047m6l194
 .PHONY : src/CMakeFiles/primes-ctidh2047m6l194.dir/build
 
 src/CMakeFiles/primes-ctidh2047m6l194.dir/clean:
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/primes-ctidh2047m6l194.dir/cmake_clean.cmake
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/primes-ctidh2047m6l194.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/primes-ctidh2047m6l194.dir/clean
 
 src/CMakeFiles/primes-ctidh2047m6l194.dir/depend:
-	cd /mnt/c/Users/25336/school/dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/dCTIDH /mnt/c/Users/25336/school/dCTIDH/src /mnt/c/Users/25336/school/dCTIDH/build /mnt/c/Users/25336/school/dCTIDH/build/src /mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/primes-ctidh2047m6l194.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/YEST/improved_dCTIDH /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/primes-ctidh2047m6l194.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/primes-ctidh2047m6l194.dir/depend
 

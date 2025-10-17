@@ -7,12 +7,11 @@
 #else
     #include "mulx/fp.h"
 #endif
-
 // 319 mults, 2040 squarings
 void fp_inv(fp x)
 {
   fp r0;
-  fp_copy(r0, x);
+  fp_copy(r0,x);
   fp r1;
   fp_sqr(r1,r0);
   fp r2;
@@ -651,5 +650,5 @@ void fp_inv(fp x)
   fp_mul(r0,r0,r32);
   fp_sq1_rep(r0,6);
   fp_mul(r0,r0,r31);
-  fp_copy(x, r0);
+  fp_copy(x,r0);
 }

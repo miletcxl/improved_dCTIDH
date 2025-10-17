@@ -3,12 +3,11 @@
 import subprocess
 import re
 import os
-
 # --- 配置 ---
 # 你要运行的可执行文件的名字
 EXECUTABLE_NAME = "build/main/ctidh-2047m1l226.main"
 # 运行的总次数
-NUM_RUNS = 100
+NUM_RUNS = 50
 
 # --- 脚本主体 ---
 

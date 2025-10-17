@@ -5,18 +5,13 @@
 
 #include "primes_namespace.h"
 
-#if BITS == 512
-#define primes_num 74
-#define two_cofactor 2
-#define primes_batches 14
-#define primes_maxbatchboundplussize 26
-#elif BITS == 2048
+#if BITS == 2048
 #define primes_num 226
 #define two_cofactor 64
-#define primes_batches 25
-#define primes_maxbatchboundplussize 15
+#define primes_batches 19
+#define primes_maxbatchboundplussize 24
 #else
-#error BITS must be 512 or 2048
+#error BITS must be 2048
 #endif
 
 extern const long long primes[primes_num];

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/dCTIDH
+CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/dCTIDH/build
+CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/ctidh-2047m6l194.dir/depend.make
@@ -70,18 +70,18 @@ include src/CMakeFiles/ctidh-2047m6l194.dir/progress.make
 include src/CMakeFiles/ctidh-2047m6l194.dir/flags.make
 
 src/CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o: src/CMakeFiles/ctidh-2047m6l194.dir/flags.make
-src/CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o: /mnt/c/Users/25336/school/dCTIDH/src/CTIDH/ctidh_api.c
+src/CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o: /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/CTIDH/ctidh_api.c
 src/CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o: src/CMakeFiles/ctidh-2047m6l194.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/25336/school/dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o -MF CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o.d -o CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o -c /mnt/c/Users/25336/school/dCTIDH/src/CTIDH/ctidh_api.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o -MF CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o.d -o CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/CTIDH/ctidh_api.c
 
 src/CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.i"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/25336/school/dCTIDH/src/CTIDH/ctidh_api.c > CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.i
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/CTIDH/ctidh_api.c > CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.i
 
 src/CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.s"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/25336/school/dCTIDH/src/CTIDH/ctidh_api.c -o CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.s
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/CTIDH/ctidh_api.c -o CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.s
 
 ctidh-2047m6l194: src/CMakeFiles/ctidh-2047m6l194.dir/CTIDH/ctidh_api.c.o
 ctidh-2047m6l194: src/CMakeFiles/ctidh-2047m6l194.dir/build.make
@@ -92,10 +92,10 @@ src/CMakeFiles/ctidh-2047m6l194.dir/build: ctidh-2047m6l194
 .PHONY : src/CMakeFiles/ctidh-2047m6l194.dir/build
 
 src/CMakeFiles/ctidh-2047m6l194.dir/clean:
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/ctidh-2047m6l194.dir/cmake_clean.cmake
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/ctidh-2047m6l194.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/ctidh-2047m6l194.dir/clean
 
 src/CMakeFiles/ctidh-2047m6l194.dir/depend:
-	cd /mnt/c/Users/25336/school/dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/dCTIDH /mnt/c/Users/25336/school/dCTIDH/src /mnt/c/Users/25336/school/dCTIDH/build /mnt/c/Users/25336/school/dCTIDH/build/src /mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/ctidh-2047m6l194.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/YEST/improved_dCTIDH /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/ctidh-2047m6l194.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/ctidh-2047m6l194.dir/depend
 

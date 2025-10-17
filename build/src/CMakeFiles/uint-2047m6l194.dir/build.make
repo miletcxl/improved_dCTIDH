@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/dCTIDH
+CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/dCTIDH/build
+CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/uint-2047m6l194.dir/depend.make
@@ -70,17 +70,17 @@ include src/CMakeFiles/uint-2047m6l194.dir/progress.make
 include src/CMakeFiles/uint-2047m6l194.dir/flags.make
 
 src/CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.o: src/CMakeFiles/uint-2047m6l194.dir/flags.make
-src/CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.o: /mnt/c/Users/25336/school/dCTIDH/src/common/uintbig2047m6l194.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/25336/school/dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building ASM object src/CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.o"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.o -c /mnt/c/Users/25336/school/dCTIDH/src/common/uintbig2047m6l194.s
+src/CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.o: /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/uintbig2047m6l194.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building ASM object src/CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.o"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/uintbig2047m6l194.s
 
 src/CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing ASM source to CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.i"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /mnt/c/Users/25336/school/dCTIDH/src/common/uintbig2047m6l194.s > CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.i
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -E /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/uintbig2047m6l194.s > CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.i
 
 src/CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.s"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /mnt/c/Users/25336/school/dCTIDH/src/common/uintbig2047m6l194.s -o CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.s
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/uintbig2047m6l194.s -o CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.s
 
 uint-2047m6l194: src/CMakeFiles/uint-2047m6l194.dir/common/uintbig2047m6l194.s.o
 uint-2047m6l194: src/CMakeFiles/uint-2047m6l194.dir/build.make
@@ -91,10 +91,10 @@ src/CMakeFiles/uint-2047m6l194.dir/build: uint-2047m6l194
 .PHONY : src/CMakeFiles/uint-2047m6l194.dir/build
 
 src/CMakeFiles/uint-2047m6l194.dir/clean:
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/uint-2047m6l194.dir/cmake_clean.cmake
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/uint-2047m6l194.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/uint-2047m6l194.dir/clean
 
 src/CMakeFiles/uint-2047m6l194.dir/depend:
-	cd /mnt/c/Users/25336/school/dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/dCTIDH /mnt/c/Users/25336/school/dCTIDH/src /mnt/c/Users/25336/school/dCTIDH/build /mnt/c/Users/25336/school/dCTIDH/build/src /mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/uint-2047m6l194.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/YEST/improved_dCTIDH /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/uint-2047m6l194.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/uint-2047m6l194.dir/depend
 

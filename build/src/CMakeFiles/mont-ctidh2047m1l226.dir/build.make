@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/dCTIDH
+CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/dCTIDH/build
+CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/mont-ctidh2047m1l226.dir/depend.make
@@ -70,18 +70,18 @@ include src/CMakeFiles/mont-ctidh2047m1l226.dir/progress.make
 include src/CMakeFiles/mont-ctidh2047m1l226.dir/flags.make
 
 src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o: src/CMakeFiles/mont-ctidh2047m1l226.dir/flags.make
-src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o: /mnt/c/Users/25336/school/dCTIDH/src/common/mont.c
+src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o: /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/mont.c
 src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o: src/CMakeFiles/mont-ctidh2047m1l226.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/25336/school/dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o -MF CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o.d -o CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o -c /mnt/c/Users/25336/school/dCTIDH/src/common/mont.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o -MF CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o.d -o CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o -c /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/mont.c
 
 src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.i"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/25336/school/dCTIDH/src/common/mont.c > CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.i
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/mont.c > CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.i
 
 src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.s"
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/25336/school/dCTIDH/src/common/mont.c -o CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.s
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && /home/caoxinlei/miniconda3/envs/dctidh/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src/common/mont.c -o CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.s
 
 mont-ctidh2047m1l226: src/CMakeFiles/mont-ctidh2047m1l226.dir/common/mont.c.o
 mont-ctidh2047m1l226: src/CMakeFiles/mont-ctidh2047m1l226.dir/build.make
@@ -92,10 +92,10 @@ src/CMakeFiles/mont-ctidh2047m1l226.dir/build: mont-ctidh2047m1l226
 .PHONY : src/CMakeFiles/mont-ctidh2047m1l226.dir/build
 
 src/CMakeFiles/mont-ctidh2047m1l226.dir/clean:
-	cd /mnt/c/Users/25336/school/dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/mont-ctidh2047m1l226.dir/cmake_clean.cmake
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src && $(CMAKE_COMMAND) -P CMakeFiles/mont-ctidh2047m1l226.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/mont-ctidh2047m1l226.dir/clean
 
 src/CMakeFiles/mont-ctidh2047m1l226.dir/depend:
-	cd /mnt/c/Users/25336/school/dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/dCTIDH /mnt/c/Users/25336/school/dCTIDH/src /mnt/c/Users/25336/school/dCTIDH/build /mnt/c/Users/25336/school/dCTIDH/build/src /mnt/c/Users/25336/school/dCTIDH/build/src/CMakeFiles/mont-ctidh2047m1l226.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/YEST/improved_dCTIDH /mnt/c/Users/25336/school/YEST/improved_dCTIDH/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/src/CMakeFiles/mont-ctidh2047m1l226.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/mont-ctidh2047m1l226.dir/depend
 

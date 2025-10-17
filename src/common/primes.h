@@ -9,11 +9,11 @@
 #if defined  P2047m1l226
 #define primes_num 226
 #define two_cofactor 64
-#define primes_batches 15
-#define WOMBATKEYS 67
+#define primes_batches 19
+#define WOMBATKEYS 73
 #define NUMBER_OF_WORDS 32
 #define UPPER_BOUND 1044  // Bits of 4 * sqrt( [p + 1] / [2^e] )
-#define ELLIGATOR_SEED 2
+#define ELLIGATOR_SEED 2 
 
 #elif defined  P2047m4l205
 #define primes_num 207

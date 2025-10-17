@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/dCTIDH
+CMAKE_SOURCE_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/dCTIDH/build
+CMAKE_BINARY_DIR = /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build
 
 # Utility rule file for benchmark-ctidh-2047m1l226.
 
@@ -67,13 +67,13 @@ include CMakeFiles/benchmark-ctidh-2047m1l226.dir/compiler_depend.make
 include CMakeFiles/benchmark-ctidh-2047m1l226.dir/progress.make
 
 CMakeFiles/benchmark-ctidh-2047m1l226: main/ctidh-2047m1l226.main
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/mnt/c/Users/25336/school/dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Benchmarking CTIDH-2047m1l226"
-	/usr/bin/cmake -E echo "Running CTIDH-2047m1l226 benchmark with 100 iterations..."
-	main/ctidh-2047m1l226.main -bact 100 > /mnt/c/Users/25336/school/dCTIDH/build/benchmark-ctidh-2047m1l226.log
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Benchmarking CTIDH-2047m1l226"
+	/usr/bin/cmake -E echo "Running CTIDH-2047m1l226 benchmark with 5 iterations..."
+	main/ctidh-2047m1l226.main -bact 5 > /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/benchmark-ctidh-2047m1l226.log
 	/usr/bin/cmake -E echo "Analyzing benchmark results for CTIDH-2047m1l226..."
-	python3 /mnt/c/Users/25336/school/dCTIDH/analyze_bench.py < /mnt/c/Users/25336/school/dCTIDH/build/benchmark-ctidh-2047m1l226.log > /mnt/c/Users/25336/school/dCTIDH/build/benchmark-ctidh-2047m1l226-analysis.log
+	python3 /mnt/c/Users/25336/school/YEST/improved_dCTIDH/analyze_bench.py < /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/benchmark-ctidh-2047m1l226.log > /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/benchmark-ctidh-2047m1l226-analysis.log
 	/usr/bin/cmake -E echo "=== BENCHMARK RESULTS FOR CTIDH-2047m1l226 ==="
-	cat /mnt/c/Users/25336/school/dCTIDH/build/benchmark-ctidh-2047m1l226-analysis.log
+	cat /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/benchmark-ctidh-2047m1l226-analysis.log
 	/usr/bin/cmake -E echo ==========================================
 
 benchmark-ctidh-2047m1l226: CMakeFiles/benchmark-ctidh-2047m1l226
@@ -89,6 +89,6 @@ CMakeFiles/benchmark-ctidh-2047m1l226.dir/clean:
 .PHONY : CMakeFiles/benchmark-ctidh-2047m1l226.dir/clean
 
 CMakeFiles/benchmark-ctidh-2047m1l226.dir/depend:
-	cd /mnt/c/Users/25336/school/dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/dCTIDH /mnt/c/Users/25336/school/dCTIDH /mnt/c/Users/25336/school/dCTIDH/build /mnt/c/Users/25336/school/dCTIDH/build /mnt/c/Users/25336/school/dCTIDH/build/CMakeFiles/benchmark-ctidh-2047m1l226.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/25336/school/YEST/improved_dCTIDH /mnt/c/Users/25336/school/YEST/improved_dCTIDH /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build /mnt/c/Users/25336/school/YEST/improved_dCTIDH/build/CMakeFiles/benchmark-ctidh-2047m1l226.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/benchmark-ctidh-2047m1l226.dir/depend
 
