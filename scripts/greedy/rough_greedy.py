@@ -31,19 +31,12 @@ MAX_ITER_MACRO = 50  # 宏观搜索的最大迭代次数
 MAX_ITER_MICRO = 20  # 微观微调的最大迭代次数
 
 class Placeholder:
-    """
-    这个类包含了所有来自外部模块的占位符函数。
-    这些函数返回合理但简化的值，以确保脚本可以完整运行。
-    为了获得精确结果，您必须用您自己的 `costisog`, `chain` 模块替换它们。
-    """
     @staticmethod
     def costisog_dac(ell):
-        """占位符：来自 costisog.py。计算差分加法链的成本。"""
-        return 2 * ell  # 简单线性估算
+        return 2 * ell  
 
     @staticmethod
     def costisog_isog_matryoshka(l_min, l_max, push):
-        """占位符：来自 costisog.py。计算 Matryoshka 同源成本。"""
         base_cost = (l_min + l_max) * 2
         eval_cost = (l_max - l_min) * 1.5
         if push == 0: return base_cost
@@ -51,22 +44,18 @@ class Placeholder:
         
     @staticmethod
     def costisog_xDBL():
-        """占位符：来自 costisog.py。返回点加倍的成本。"""
         return 6
 
     @staticmethod
     def chain_cost2(chain):
-        """占位符：来自 chain.py。返回链的成本（乘法和平方次数）。"""
         return (len(str(bin(chain))) * 2, len(str(bin(chain))) * 1.5)
 
-# --- 使用占位符 ---
 dac = Placeholder.costisog_dac
 isog_matryoshka = Placeholder.costisog_isog_matryoshka
 xDBL = Placeholder.costisog_xDBL
 chain_cost2 = Placeholder.chain_cost2
 
 def memoized(func):
-    """简单的 LRU 缓存装饰器"""
     return lru_cache(maxsize=4096)(func)
 
 @memoized
@@ -90,10 +79,6 @@ def daclen(target):
 
 @lru_cache(maxsize=4096)
 def dynamic_programming_algorithm(L_tuple, C_dac_tuple, C_isog_tuple, C_eval_tuple):
-    """
-    动态规划算法，用于为给定的素数批次找到最优的计算策略和成本。
-    输入必须是元组才能被缓存。
-    """
     L = list(L_tuple)
     C_xMUL = list(C_dac_tuple)
     C_xISOG = list(C_isog_tuple)
@@ -111,8 +96,6 @@ def dynamic_programming_algorithm(L_tuple, C_dac_tuple, C_isog_tuple, C_eval_tup
     for i in range(2, n + 1):
         C[i], S[i] = {}, {}
         for tpl in get_neighboring_sets(L, i):
-            # 为了缓存，将列表索引转换为值索引
-            # 注意：这假设批次内没有重复的素数，在dCTIDH中这是成立的
             L_indices = {prime: idx for idx, prime in enumerate(L)}
 
             alpha = []
@@ -123,22 +106,15 @@ def dynamic_programming_algorithm(L_tuple, C_dac_tuple, C_isog_tuple, C_eval_tup
                         sum(C_xMUL[L_indices[t]] for t in tpl[b:]))
                 alpha.append((b, cost))
             
-            # 找到成本最小的分割点
             best_b, min_cost = min(alpha, key=lambda t: t[1])
             C[i][tpl] = min_cost
             
-            # 构建策略
-            # 策略格式：[分割点, 左子策略, 右子策略]
             left_strategy = S[i-best_b][tpl[best_b:]]
             right_strategy = S[best_b][tpl[:best_b]]
             S[i][tpl] = [best_b] + left_strategy + right_strategy
 
     final_tuple = tuple(L)
     return S[n][final_tuple], C[n][final_tuple]
-
-# ==============================================================================
-# 数据与函数 (源自 greedyriver.py)
-# ==============================================================================
 first_primes = [3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541, 547, 557, 563, 569, 571, 577, 587, 593, 599, 601, 607, 613, 617, 619, 631, 641, 643, 647, 653, 659, 661, 673, 677, 683, 691, 701, 709, 719, 727, 733, 739, 743, 751, 757, 761, 769, 773, 787, 797, 809, 811, 821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941, 947, 953, 967, 971, 977, 983, 991, 997, 1009, 1013, 1019, 1021, 1031, 1033, 1039, 1049, 1051, 1061, 1063, 1069, 1087, 1091, 1093, 1097, 1103, 1109, 1117, 1123, 1129, 1151, 1153, 1163, 1171, 1181, 1187, 1193, 1201, 1213, 1217, 1223, 1229, 1231, 1237, 1249, 1259, 1277, 1279, 1283, 1289, 1291, 1297, 1301, 1303, 1307, 1319, 1321, 1327, 1361, 1367, 1373, 1381, 1399, 1409, 1423, 1427, 1429]
 
 cofactors = { 
@@ -261,7 +237,6 @@ def calculate_detailed_batch_cost(batch_primes_tuple, M_i):
         C_isog.append(ic); C_eval.append(ice - ic)
     C_isog.reverse(); C_eval.reverse()
     
-    # 调用真实的DP算法
     strategy, cost = dynamic_programming_algorithm(tuple(L_max), tuple(C_mul), tuple(C_isog), tuple(C_eval))
     return cost, strategy
 
@@ -275,9 +250,6 @@ def calculate_total_overhead_cost(n_primes, all_primes_list):
     point_ops = elligator_cost(p_minus_1)
     return cofactor_cost + final_inv + point_ops
 
-# ==============================================================================
-# 核心优化算法 v2.1 - 支持可变 M_i
-# ==============================================================================
 def find_best_config_for_grouping(grouping, all_primes):
     k = len(grouping)
     best_config_for_grouping = {'cost': float('inf')}
@@ -319,7 +291,6 @@ def find_best_config_for_grouping(grouping, all_primes):
             
             if current_security >= MIN_SECURITY_BITS:
                 if current_total_cost < best_config_for_grouping.get('cost', float('inf')):
-                    # 重新从 template 构建 active_batches 以包含所有信息
                     active_batches = [next(b for b in batch_data if b['id'] == ab_temp['id']) for ab_temp in active_batches_template]
                     final_mi_list = [b['options'][current_mi_indices[b['id']]]['mi'] for b in active_batches]
                     
@@ -353,21 +324,17 @@ def find_best_config_for_grouping(grouping, all_primes):
     return best_config_for_grouping
 
 def build_groups_from_sizes(sizes, n_primes):
-    """根据大小列表构建分组索引列表"""
     groups = []
     indices = list(range(n_primes))
     start_idx = 0
     for size in sizes:
-        if size <= 0: return None # 无效的大小
+        if size <= 0: return None 
         groups.append(indices[start_idx : start_idx + size])
         start_idx += size
-    if start_idx != n_primes: return None # 总和不匹配
+    if start_idx != n_primes: return None 
     return groups
 
 def macro_search_by_adjusting_sizes(initial_group_sizes, all_primes):
-    """
-    阶段一：宏观搜索。直接优化分组大小的列表，以进行大范围的结构性搜索。
-    """
     k = len(initial_group_sizes)
     n = len(all_primes)
     current_sizes = list(initial_group_sizes)
@@ -379,10 +346,9 @@ def macro_search_by_adjusting_sizes(initial_group_sizes, all_primes):
     for iter_num in range(MAX_ITER_MACRO):
         improved = False
         
-        # 尝试将大小从批次 i 移动到批次 j
         for i in range(k):
             for j in range(k):
-                if i == j or current_sizes[i] <= 5: # 不从太小的组移出
+                if i == j or current_sizes[i] <= 5:
                     continue
                 
                 neighbor_sizes = list(current_sizes)
@@ -410,9 +376,6 @@ def macro_search_by_adjusting_sizes(initial_group_sizes, all_primes):
     return best_config
 
 def micro_tune_by_swapping_content(initial_groups, all_primes, initial_best_config):
-    """
-    阶段二：微观微调。在给定的分组基础上，通过移动单个素数进行精细化调整。
-    """
     k = len(initial_groups)
     current_groups = [list(g) for g in initial_groups]
     best_config = initial_best_config
