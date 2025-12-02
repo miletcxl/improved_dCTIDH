@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CTIDH-H Benchmark Console</title>
+    <style>
+      :root {
+        --bg1: #050814;
+        --bg2: #071325;
+        --bg3: #0e1b36;
+        --accent: #3cf4c3;
+        --accent2: #f6c14f;
+        --accent3: #6f7dff;
+        --muted: #a7b3c8;
+        --text: #eaf1ff;
+        --panel: rgba(7, 13, 26, 0.9);
+        --card: rgba(10, 17, 34, 0.95);
+        --gridline: rgba(255, 255, 255, 0.04);
+        --danger: #f97373;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Space Grotesk", "Archivo", "IBM Plex Sans", "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 20% -10%, rgba(111, 125, 255, 0.35), transparent 26%),
+          radial-gradient(circle at 82% 12%, rgba(246, 193, 79, 0.35), transparent 22%),
+          linear-gradient(145deg, var(--bg1), var(--bg2) 38%, var(--bg3));
+        background-size: 140% 140%;
+        animation: drift 16s ease-in-out infinite alternate;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 28px 14px;
+        position: relative;
+        overflow-x: hidden;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background:
+          linear-gradient(90deg, var(--gridline) 1px, transparent 1px),
+          linear-gradient(0deg, var(--gridline) 1px, transparent 1px);
+        background-size: 120px 120px;
+        opacity: 0.45;
+        pointer-events: none;
+      }
+      @keyframes drift {
+        to { background-position: 22% 18%, 84% 24%, 60% 60%; }
+      }
+      .shell {
+        width: 100%; max-width: 1120px; max-height: 95vh;
+        background: linear-gradient(150deg, rgba(13, 25, 47, 0.92), rgba(5, 9, 22, 0.98));
+        border-radius: 20px;
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        box-shadow:
+          0 24px 60px rgba(5, 8, 20, 0.8),
+          0 0 0 1px rgba(255, 255, 255, 0.02);
+        padding: 18px 20px 20px;
+        overflow-y: auto; overflow-x: hidden;
+        backdrop-filter: blur(6px);
+      }
+      .header { display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+      .title-main {
+        font-size: 24px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 0;
+        background: linear-gradient(120deg, #7ff8ff, #5ad1ff 35%, #f6c14f 70%, #6f7dff);
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 0 6px 20px rgba(124, 227, 255, 0.18);
+      }
+      .subtitle { font-size: 13px; color: #c5cede; margin-top: 4px; letter-spacing: 0.02em; }
+      .badge {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.55);
+        background: linear-gradient(120deg, rgba(60, 244, 195, 0.24), rgba(111, 125, 255, 0.35));
+        margin-bottom: 8px;
+        text-align: right;
+        color: #f7fbff;
+      }
+      .nav { display: inline-flex; padding: 4px; border-radius: 999px; background: rgba(11, 16, 32, 0.9); border: 1px solid rgba(148,163,184,0.35); box-shadow: inset 0 1px 0 rgba(255,255,255,0.05); }
+      .nav button { border: none; background: none; color: var(--muted); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; padding: 7px 15px; border-radius: 999px; cursor: pointer; transition: color 0.2s ease, transform 0.2s ease; }
+      .nav button:hover { color: #f7fbff; transform: translateY(-1px); }
+      .nav button.active { background: linear-gradient(130deg, rgba(60, 244, 195, 0.42), rgba(111, 125, 255, 0.6)); color: #0c162c; font-weight: 700; box-shadow: 0 8px 24px rgba(111, 125, 255, 0.35); }
+      .page { display: none; margin-top: 16px; }
+      .page.active { display: block; }
+      .panel { background: radial-gradient(circle at 0 0, rgba(10, 16, 32, 0.9), var(--panel) 60%); border-radius: 14px; border: 1px solid rgba(148,163,184,0.28); padding: 14px 16px 16px; margin-bottom: 14px; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35); }
+      .panel-title { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: transparent; margin-bottom: 10px; background: linear-gradient(110deg, #c7d2ff, #36f3c3); -webkit-background-clip: text; }
+      label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+      input[type="text"] { width: 100%; padding: 8px 10px; border-radius: 10px; border: 1px solid rgba(82,112,150,0.9); background: rgba(4, 8, 20, 0.9); color: var(--text); font-size: 13px; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+      input:focus { outline: none; border-color: var(--accent); box-shadow: 0 8px 22px rgba(60,244,195,0.12); }
+      .btn { padding: 8px 15px; border-radius: 12px; border: 1px solid rgba(60,244,195,0.6); background: linear-gradient(135deg, rgba(60,244,195,0.24), rgba(111,125,255,0.6)); color: #0b1230; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; box-shadow: 0 12px 28px rgba(111,125,255,0.25), inset 0 1px 0 rgba(255,255,255,0.2); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+      .btn:hover { transform: translateY(-1px); box-shadow: 0 16px 32px rgba(111,125,255,0.28), inset 0 1px 0 rgba(255,255,255,0.3); }
+      .btn:disabled { opacity: 0.55; cursor: not-allowed; }
+      .hint { font-size: 12px; color: var(--muted); margin-left: 8px; }
+      .stats { font-size: 12px; margin-top: 6px; color: #c7d2e5; }
+      .log-box { background: rgba(4, 7, 17, 0.92); border-radius: 12px; border: 1px solid rgba(26,35,58,0.9); padding: 10px; max-height: 260px; overflow: auto; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 11px; white-space: pre; box-shadow: inset 0 1px 0 rgba(255,255,255,0.04); }
+      .cmp-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 12px; }
+      .cmp-table th, .cmp-table td { border: 1px solid rgba(148,163,184,0.22); padding: 7px 9px; text-align: center; }
+      .cmp-table th { background: linear-gradient(120deg, rgba(60,244,195,0.14), rgba(111,125,255,0.16)); color: #d7e3ff; font-weight: 700; letter-spacing: 0.04em; }
+      .cmp-table td { background: rgba(255,255,255,0.02); }
+      .cmp-row-ours { font-weight: 700; color: #62f3c0; background: rgba(60,244,195,0.08); }
+      .bench-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+      .bench-card { background: radial-gradient(circle at 0 0, rgba(11, 18, 37, 0.95), var(--card) 70%); border-radius: 12px; border: 1px solid rgba(148,163,184,0.38); padding: 12px 14px; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28); }
+      .bench-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+      .bench-name { font-size: 14px; font-weight: 700; letter-spacing: 0.02em; }
+      .bench-size { font-size: 11px; color: var(--muted); }
+      .bench-bar { width: 100%; height: 16px; border-radius: 999px; background: rgba(4, 7, 17, 0.92); border: 1px solid rgba(31,41,55,0.9); overflow: hidden; }
+      .bench-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #6f7dff, #36f3c3); transition: width 0.7s cubic-bezier(0.22,0.61,0.36,1); box-shadow: 0 0 12px rgba(111,125,255,0.3); }
+      .bench-fill.slow { background: linear-gradient(90deg, #f97373, #fb923c); box-shadow: none; }
+      .bench-fill.ours { background: linear-gradient(90deg, #36f3c3, #f6c14f); box-shadow: 0 0 12px rgba(54,243,195,0.5); }
+      .demo-layout { display: grid; grid-template-columns: 1fr 1.1fr 1fr; gap: 10px; margin-top: 6px; align-items: stretch; }
+      @media (max-width: 960px) { .demo-layout { grid-template-columns: minmax(0, 1fr); } }
+      .demo-layout > div { display: flex; flex-direction: column; }
+      .demo-column-title { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+      .demo-box { background: rgba(4, 7, 17, 0.92); border-radius: 11px; border: 1px solid rgba(15,23,42,0.9); padding: 9px; height: 220px; overflow-y: auto; overflow-x: auto; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 11px; white-space: pre; box-shadow: inset 0 1px 0 rgba(255,255,255,0.03); }
+      .demo-line { opacity: 0; transform: translateY(4px); transition: opacity 0.3s ease, transform 0.3s ease; }
+      .demo-line.visible { opacity: 1; transform: translateY(0); }
+      .demo-line-alice { color: #a5b4fc; }
+      .demo-line-bob { color: #6ee7b7; }
+      .demo-line-secret { color: #f97373; }
+      .demo-line-header { color: #fde68a; }
+      .demo-stage { margin-top: 8px; font-size: 12px; color: var(--muted); display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+      .demo-stage-steps { display: flex; gap: 6px; flex-wrap: wrap; }
+      .demo-stage-step { padding: 3px 10px; border-radius: 999px; border: 1px solid rgba(55,65,81,0.8); font-size: 11px; color: var(--muted); background: rgba(255,255,255,0.02); }
+      .demo-stage-step.active { border-color: rgba(60,244,195,0.75); color: #e5e7eb; background: radial-gradient(circle at 0 0, rgba(60,244,195,0.35), transparent 70%); box-shadow: 0 0 12px rgba(60,244,195,0.35); }
+      .demo-stage-progress { margin-top: 6px; width: 100%; height: 8px; border-radius: 999px; background: #020617; border: 1px solid rgba(31,41,55,0.9); overflow: hidden; }
+      .demo-stage-progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #36f3c3, #6f7dff, #f6c14f); transition: width 0.25s ease-out; }
+      .modal-backdrop { position: fixed; inset: 0; background: rgba(5,8,20,0.8); display: none; align-items: center; justify-content: center; z-index: 30; }
+      .modal-backdrop.visible { display: flex; }
+      .modal-content { width: min(90%, 720px); max-height: 80vh; background: #020617; border-radius: 12px; border: 1px solid rgba(148,163,184,0.6); box-shadow: 0 24px 60px rgba(0,0,0,0.85); padding: 12px 14px 14px; color: var(--text); background: linear-gradient(150deg, rgba(7,14,28,0.95), rgba(9,20,40,0.9)); }
+      .modal-title { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+      .modal-body { max-height: 60vh; overflow: auto; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 11px; white-space: pre-wrap; background: #020617; border-radius: 8px; border: 1px solid rgba(31,41,55,0.9); padding: 8px; }
+      .modal-close { margin-top: 8px; font-size: 12px; color: var(--muted); cursor: pointer; text-align: right; }
+      .hex-link { color: #fb923c; cursor: pointer; text-decoration: underline dotted; }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="header">
+        <div>
+          <h1 class="title-main">CTIDH-H BENCHMARK CONSOLE</h1>
+          <div class="subtitle">Post-Quantum Isogeny Cryptography · Constant-time Evaluation</div>
+        </div>
+        <div>
+          <div class="badge">POST-QUANTUM / ISOGENY / CTIDH-H</div>
+          <div class="nav">
+            <button class="active" data-page="bench" type="button">BENCHMARK</button>
+            <button data-page="offline" type="button">OFFLINE DATA</button>
+            <button data-page="demo" type="button">KEY EXCHANGE</button>
+          </div>
+        </div>
+      </div>
+      <div class="page active" id="page-bench">
+        <div class="panel">
+          <div class="panel-title">STATIC BENCHMARK COMPARISON</div>
+          <div class="hint">Pre-measured avg time (one key exchange, seconds). Bar duration equals real time; shorter is faster.</div>
+          <div class="bench-grid">
+            <div class="bench-card"><div class="bench-header"><div class="bench-name">seCSIDH</div><div class="bench-size">size: 2048 | 226</div></div><div class="bench-bar"><div id="bench-secsidh" class="bench-fill slow"></div></div><div class="stats">time ≈ 9.312 s</div></div>
+            <div class="bench-card"><div class="bench-header"><div class="bench-name">dCSIDH</div><div class="bench-size">size: 512</div></div><div class="bench-bar"><div id="bench-dcsidh" class="bench-fill slow"></div></div><div class="stats">time ≈ 197.558 s</div></div>
+            <div class="bench-card"><div class="bench-header"><div class="bench-name">CTIDH</div><div class="bench-size">size: 2048 | 226</div></div><div class="bench-bar"><div id="bench-ctidh" class="bench-fill"></div></div><div class="stats">time ≈ 8.437 s</div></div>
+            <div class="bench-card"><div class="bench-header"><div class="bench-name">dCTIDH</div><div class="bench-size">size: 2048 | 226</div></div><div class="bench-bar"><div id="bench-dctidh" class="bench-fill"></div></div><div class="stats">time ≈ 7.003 s</div></div>
+            <div class="bench-card" style="border-color: rgba(74, 222, 128, 0.7)"><div class="bench-header"><div class="bench-name">HCTIDH (Ours)</div><div class="bench-size">size: 2048 | 226</div></div><div class="bench-bar"><div id="bench-hctidh" class="bench-fill ours"></div></div><div class="stats">time ≈ 6.569 s (fastest)</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="page" id="page-offline">
+        <div class="panel">
+          <div class="panel-title">Performance & Cost</div>
+          <div class="hint">Same environment mean values; lower is better. HCTIDH is ours.</div>
+          <table class="cmp-table">
+            <thead><tr><th>variant</th><th>Mcycles(Mean)</th><th>M</th><th>S</th><th>A</th><th>Fp-mults(MS)</th><th>combo185</th></tr></thead>
+            <tbody>
+              <tr><td>dCSIDH-2048</td><td>-</td><td>1315203</td><td>227501</td><td>-</td><td>1542704</td><td>-</td></tr>
+              <tr><td>CTIDH-2048</td><td>3339.05546</td><td>354354</td><td>77275</td><td>517293</td><td>431629</td><td>442039</td></tr>
+              <tr><td>dCTIDH-2048|226</td><td>3224.39426</td><td>265192</td><td>50572</td><td>474336</td><td>315764</td><td>329366</td></tr>
+              <tr class="cmp-row-ours"><td>HCTIDH-2048|226 (Ours)</td><td>2673.57563</td><td>247631</td><td>49271</td><td>439514</td><td>296902</td><td>309024</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel">
+          <div class="panel-title">Ablation: layered model × Intel ADX</div>
+          <div class="hint">Compare variants in same environment, lower MCycles is better.</div>
+          <table class="cmp-table">
+            <thead><tr><th>variant</th><th>method</th><th>Mcycles(Mean)</th><th>Fp-mults</th></tr></thead>
+            <tbody>
+              <tr><td>dCTIDH-2048|226 (Baseline)</td><td>WOMBats</td><td>3224.39426</td><td>315764</td></tr>
+              <tr><td>Our dCTIDH</td><td>WOMBats + adx</td><td>2856.94138</td><td>315764</td></tr>
+              <tr><td>Our dCTIDH</td><td>HWOMBats</td><td>2940.40764</td><td>296902</td></tr>
+              <tr class="cmp-row-ours"><td>HCTIDH-2048|226 (Ours)</td><td>HWOMBats + adx</td><td>2673.57563</td><td>296902</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="page" id="page-demo">
+        <div class="panel">
+          <div class="panel-title">HWOMBat Config (write to autogen)</div>
+          <div class="hint">Only replace the second tuple; the first (10,13,12,11,14,13,12,10,12,13,11,13,11,12,12,12,13,10,11) stays.</div>
+          <div style="margin-top: 6px; display: flex; flex-direction: column; gap: 6px;">
+            <label for="autogenLine">New tuple (include parentheses)</label>
+            <input id="autogenLine" type="text" value="(7, 0, 9, 8, 7, 6, 6, 5, 4, 4, 4, 3, 3, 2, 2, 2, 2, 2, 0)" />
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+              <button class="btn" type="button" onclick="writeAutogen()">write autogen</button>
+              <button class="btn" type="button" onclick="randomPreset()">random preset</button>
+            </div>
+            <div><strong>Current second tuple:</strong> <span id="autogenCurrent">[loading]</span></div>
+            <div id="autogenMsg" class="stats"></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-title">LIVE KEY EXCHANGE DEMO</div>
+          <label for="demoExe">Executable path</label>
+          <input id="demoExe" type="text" value="{{ default_exe }}" placeholder="build/main/ctidh-2047m1l226.main" />
+          <div style="margin-top: 8px; margin-bottom: 4px">
+            <button class="btn" type="button" onclick="runDemo()">RUN ONE KEY EXCHANGE</button>
+            <span class="hint">Stages: Key Generation → Alice → Bob → Secret sharing. Long sk/pk/ss shown in modal.</span>
+          </div>
+          <div class="demo-layout">
+            <div><div class="demo-column-title">ALICE</div><div id="demoAlice" class="demo-box">Waiting…</div></div>
+            <div><div class="demo-column-title">CHANNEL / SHARED SECRET</div><div id="demoShared" class="demo-box">Key generation & secret sharing output will appear here.</div></div>
+            <div><div class="demo-column-title">BOB</div><div id="demoBob" class="demo-box">Waiting…</div></div>
+          </div>
+          <div class="demo-stage">
+            <div class="demo-stage-steps">
+              <div class="demo-stage-step" id="stage-0">1 · Key Gen</div>
+              <div class="demo-stage-step" id="stage-1">2 · Alice</div>
+              <div class="demo-stage-step" id="stage-2">3 · Bob</div>
+              <div class="demo-stage-step" id="stage-3">4 · Secret</div>
+            </div>
+            <div>
+              <button class="btn" type="button" onclick="playNextStage()">NEXT STAGE</button>
+              <span class="hint">Manual step-through for stage demo.</span>
+            </div>
+          </div>
+          <div class="demo-stage-progress"><div id="stageProgressFill" class="demo-stage-progress-fill"></div></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">RUNTIME LOG</div>
+        <div id="logOutput" class="log-box"></div>
+      </div>
+    </div>
+
+    <div id="hexModal" class="modal-backdrop" onclick="hideHexModal(event)">
+      <div class="modal-content">
+        <div class="modal-title" id="hexModalTitle"></div>
+        <div class="modal-body" id="hexModalBody"></div>
+        <div class="modal-close">Click anywhere to close</div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll('.nav button').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const page = btn.getAttribute('data-page');
+          document.querySelectorAll('.nav button').forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          document.querySelectorAll('.page').forEach((p) => {
+            p.classList.toggle('active', p.id === 'page-' + page);
+          });
+          if (page === 'bench') animateBenchBars();
+          if (page === 'demo') fetchAutogenPreview();
+        });
+      });
+
+      const BENCH_DATA = [
+        { id: 'secsidh', time: 9.312 },
+        { id: 'dcsidh', time: 197.558 },
+        { id: 'ctidh', time: 8.437 },
+        { id: 'dctidh', time: 7.003 },
+        { id: 'hctidh', time: 6.569 },
+      ];
+      const PRESET_CHOICES = [
+        "(7, 0, 9, 0, 8, 7, 6, 6, 5, 4, 4, 4, 3, 3, 2, 2, 2, 2, 2)",
+        "(7, 0, 0, 9, 8, 7, 6, 6, 5, 4, 4, 4, 3, 3, 2, 2, 2, 2, 2)",
+        "(7, 0, 9, 8, 0, 7, 6, 6, 5, 4, 4, 4, 3, 3, 2, 2, 2, 2, 2)",
+      ];
+
+      function animateBenchBars() {
+        BENCH_DATA.forEach((item) => {
+          const el = document.getElementById('bench-' + item.id);
+          if (!el) return;
+          el.style.width = '0%';
+          let duration = item.time;
+          if (duration <= 0) duration = 0.1;
+          el.style.transitionDuration = duration.toFixed(3) + 's';
+          setTimeout(() => { el.style.width = '100%'; }, 200);
+        });
+      }
+
+      function appendLog(message) {
+        const box = document.getElementById('logOutput');
+        const ts = new Date().toLocaleTimeString('en-US', { hour12: false });
+        box.textContent += `[${ts}] ${message}\n`;
+        box.scrollTop = box.scrollHeight;
+      }
+
+      function safeParseJson(status, text) {
+        try { return text ? JSON.parse(text) : null; }
+        catch (e) { appendLog(`Response not JSON (status=${status}) fragment: ` + String(text).slice(0,80)); return null; }
+      }
+
+      function showHexModal(title, fullLine) {
+        document.getElementById('hexModalTitle').textContent = title;
+        document.getElementById('hexModalBody').textContent = fullLine;
+        document.getElementById('hexModal').classList.add('visible');
+      }
+      function hideHexModal(event) {
+        const modal = document.getElementById('hexModal');
+        if (!modal.classList.contains('visible')) return;
+        if (!event || event.target === modal || event.target.classList.contains('modal-close')) {
+          modal.classList.remove('visible');
+        }
+      }
+
+      function createDemoLine(container, line, extraClass) {
+        const div = document.createElement('div');
+        div.classList.add('demo-line');
+        if (extraClass) div.classList.add(extraClass);
+        const trimmed = line.trim();
+        const keyPatterns = ['sk_a :=', 'pk_a :=', 'ss_a :=', 'sk_b :=', 'pk_b :=', 'ss_b :='];
+        if (keyPatterns.find((p) => trimmed.includes(p))) {
+          const left = trimmed.split(':=')[0].trim();
+          const span = document.createElement('span');
+          span.textContent = left + ' · click to view full hex';
+          span.classList.add('hex-link');
+          span.addEventListener('click', () => showHexModal(left, line));
+          div.appendChild(span);
+        } else {
+          div.textContent = line;
+        }
+        container.appendChild(div);
+        return div;
+      }
+
+      let demoSegments = [];
+      let currentStageIndex = -1;
+
+      function resetDemoStageUI() {
+        for (let i = 0; i < 4; i++) {
+          const el = document.getElementById('stage-' + i);
+          if (el) el.classList.remove('active');
+        }
+        const progressFill = document.getElementById('stageProgressFill');
+        if (progressFill) progressFill.style.width = '0%';
+      }
+
+      function renderDemoSegments(stdout, stderr) {
+        const aliceBox = document.getElementById('demoAlice');
+        const bobBox = document.getElementById('demoBob');
+        const sharedBox = document.getElementById('demoShared');
+        aliceBox.textContent = '';
+        bobBox.textContent = '';
+        sharedBox.textContent = '';
+
+        const lines = (stdout || '').split(/\r?\n/);
+        const headerLines = [], aliceLines = [], bobLines = [], secretLines = [], successLines = [];
+        let section = 'header';
+        for (const raw of lines) {
+          const line = raw;
+          const trimmed = line.trim();
+          if (!trimmed) continue;
+          if (trimmed.startsWith('// --------------')) { section = 'header'; headerLines.push(line); continue; }
+          if (trimmed.startsWith('// Key generation')) { section = 'header'; headerLines.push(line); continue; }
+          if (trimmed.startsWith('// Secret sharing')) { section = 'secret'; secretLines.push(line); continue; }
+          if (trimmed.startsWith('// Alice')) { section = section === 'secret' ? 'secret-alice' : 'alice'; continue; }
+          if (trimmed.startsWith('// Bob')) { section = (section === 'secret' || section === 'secret-alice') ? 'secret-bob' : 'bob'; continue; }
+          if (trimmed.startsWith('// Successfully')) { section = 'success'; }
+          if (section === 'header') headerLines.push(line);
+          else if (section === 'alice' || section === 'secret-alice') aliceLines.push(line);
+          else if (section === 'bob' || section === 'secret-bob') bobLines.push(line);
+          else if (section === 'secret') secretLines.push(line);
+          else if (section === 'success') successLines.push(line);
+        }
+
+        demoSegments = [
+          { id: 0, target: sharedBox, lines: headerLines, cls: 'demo-line-header' },
+          { id: 1, target: aliceBox, lines: aliceLines, cls: 'demo-line-alice' },
+          { id: 2, target: bobBox, lines: bobLines, cls: 'demo-line-bob' },
+          { id: 3, target: sharedBox, lines: secretLines.concat(successLines), cls: 'demo-line-secret' },
+        ];
+        resetDemoStageUI();
+        currentStageIndex = -1;
+        if (!headerLines.length && !aliceLines.length && !bobLines.length && !secretLines.length && !successLines.length) {
+          sharedBox.textContent = '[no stdout]';
+        }
+        if (stderr) appendLog('stderr: ' + stderr.slice(0, 120));
+      }
+
+      function playStage(index) {
+        if (!demoSegments.length) return;
+        if (index < 0 || index >= demoSegments.length) return;
+        const seg = demoSegments[index];
+        resetDemoStageUI();
+        const stageEl = document.getElementById('stage-' + index);
+        if (stageEl) stageEl.classList.add('active');
+        const progressFill = document.getElementById('stageProgressFill');
+        if (progressFill) progressFill.style.width = (((index + 1) / demoSegments.length) * 100).toFixed(0) + '%';
+        const perLineDelay = 60;
+        seg.lines.forEach((line, i) => {
+          const div = createDemoLine(seg.target, line, seg.cls);
+          setTimeout(() => { div.classList.add('visible'); seg.target.scrollTop = seg.target.scrollHeight; }, i * perLineDelay);
+        });
+      }
+
+      function playNextStage() {
+        if (!demoSegments.length) return;
+        if (currentStageIndex >= demoSegments.length - 1) { appendLog('All stages finished.'); return; }
+        currentStageIndex += 1;
+        playStage(currentStageIndex);
+      }
+
+      function runDemo() {
+        const exe = document.getElementById('demoExe').value.trim();
+        const aliceBox = document.getElementById('demoAlice');
+        const bobBox = document.getElementById('demoBob');
+        const sharedBox = document.getElementById('demoShared');
+        if (!exe) { sharedBox.textContent = 'Please provide executable path.'; return; }
+        aliceBox.textContent = 'Preparing Alice material...';
+        bobBox.textContent = 'Preparing Bob material...';
+        sharedBox.textContent = 'Running key exchange demo...';
+        resetDemoStageUI();
+        currentStageIndex = -1;
+        demoSegments = [];
+        fetch('/demo', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ exe_path: exe }) })
+          .then((resp) => resp.text().then((text) => ({ status: resp.status, text })))
+          .then(({ status, text }) => {
+            const data = safeParseJson(status, text) || {};
+            if (status >= 400 || data.status === 'error') {
+              const msg = data.message || text || `Demo failed, HTTP ${status}`;
+              sharedBox.textContent = msg;
+              appendLog('Demo failed: ' + msg);
+              return;
+            }
+            renderDemoSegments(data.stdout || '', data.stderr || '');
+            appendLog('Demo ready, click NEXT STAGE to reveal.');
+          })
+          .catch((err) => {
+            const msg = String(err);
+            sharedBox.textContent = 'Demo failed: ' + msg;
+            appendLog('Demo failed: ' + msg);
+          });
+      }
+
+      function fetchAutogenPreview() {
+        fetch('/autogen', { method: 'GET' })
+          .then((r) => r.json())
+          .then((data) => {
+            document.getElementById('autogenCurrent').textContent = (data && data.status === 'ok') ? (data.current || '[none]') : (data.message || '[load failed]');
+          })
+          .catch((e) => { document.getElementById('autogenCurrent').textContent = '[load failed]'; appendLog('read autogen failed: ' + e); });
+      }
+
+      function writeAutogen() {
+        const line = document.getElementById('autogenLine').value.trim();
+        const msgEl = document.getElementById('autogenMsg');
+        if (!line) { msgEl.textContent = 'Input tuple like (7, 0, 9, ...)'; return; }
+        msgEl.textContent = 'Writing autogen...';
+        fetch('/autogen', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ line }) })
+          .then((r) => r.json().then((b) => ({ ok: r.ok, body: b })))
+          .then(({ ok, body }) => {
+            if (!ok || body.status !== 'ok') { msgEl.textContent = 'Write failed: ' + (body.message || 'unknown'); appendLog('write autogen failed: ' + (body.message || JSON.stringify(body))); return; }
+            msgEl.textContent = 'Updated autogen.';
+            appendLog('autogen updated');
+            fetchAutogenPreview();
+          })
+          .catch((e) => { msgEl.textContent = 'Network/server error'; appendLog('write autogen error: ' + e); });
+      }
+
+      function randomPreset() {
+        const pick = PRESET_CHOICES[Math.floor(Math.random() * PRESET_CHOICES.length)];
+        document.getElementById('autogenLine').value = pick;
+      }
+
+      window.addEventListener('load', () => {
+        animateBenchBars();
+        fetchAutogenPreview();
+      });
+    </script>
+  </body>
+</html>
